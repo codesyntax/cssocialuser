@@ -1,0 +1,15 @@
+{% load i18n %}
+<div id="useroptions">
+{% if user.is_authenticated %}
+{% if user.get_profile.get_photo %}
+<img class="userlogged" width="30" height="30" src="{{user.get_profile.get_photo.get_profile_url}}" alt="{% trans "User's picture" %}" />
+{% endif %}
+{{ user.get_profile.get_fullname }} ({{user.username}})
+<a href="{% url cssocialprofile_edit_profile %}">{% trans "Profile" %}</a>
+<a href="{% url cssocialprofile_logout %}?next={{request.path}}">{% trans "Logout" %}</a>
+
+{%else%}
+<a href="{% url cssocialprofile_user_login %}?next={{request.path}}">{% trans "Login" %}</a>
+{%endif%}
+
+</div>

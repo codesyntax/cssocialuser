@@ -1,0 +1,622 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-21 16:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: forms.py:14
+msgid "Your picture"
+msgstr "Zure irudia"
+
+#: forms.py:14
+msgid "Please upload a picture of you. Supported formats: jpg, png, gif."
+msgstr "Mesedez, kargatu zure irudi bat. Onartutako formatuak: jpg, png, gif."
+
+#: forms.py:23
+#, python-format
+msgid ""
+"The name of the picture (%s) has an unsupported character. Please rename it "
+"before uploading."
+msgstr ""
+"Kargatu duzun fitxategiaren izenak (%s) karaktere bereziren bat du. "
+"Mesedezberrizendatu berriz kargatu aurretik."
+
+#: forms.py:27
+msgid ""
+"The picture is not in one of our supported formats. We don't support BMP "
+"files. Please change it"
+msgstr ""
+"Kargatu duzun irudia ez dago guk onartzen dugun formatuetako batean. Ezin "
+"duguBMP fitxategirik prozesatu. Aldatu mesedez."
+
+#: models.py:24
+msgid "Full name"
+msgstr "Izen osoa"
+
+#: models.py:25
+msgid "Biography/description"
+msgstr "Biografia/deskribapena"
+
+#: views.py:35
+msgid "New user data saved."
+msgstr "Erabiltzailearen datuak gordeta"
+
+#: templates/cssocialprofile/header_useroptions.html:5
+msgid "User's picture"
+msgstr "Erabiltzailearen argazkia"
+
+#: templates/cssocialprofile/header_useroptions.html:8
+msgid "Profile"
+msgstr "Profila"
+
+#: templates/cssocialprofile/header_useroptions.html:9
+msgid "Logout"
+msgstr "Irten"
+
+#: templates/cssocialprofile/header_useroptions.html:12
+msgid "Login"
+msgstr "Sartu"
+
+#: templates/profile/base.html:8
+msgid "Account"
+msgstr "Erabiltzaile kontua"
+
+#: templates/profile/base.html:10
+msgid "Basic account"
+msgstr "Oinarrizko kontua"
+
+#: templates/profile/base.html:11 templates/profile/edit_photo.html:5
+msgid "Photo"
+msgstr "Argazkiak"
+
+#: templates/profile/base.html:12 templates/profile/edit_social.html:5
+msgid "Social networks"
+msgstr "Sare sozialak"
+
+#: templates/profile/edit_personal.html:5
+msgid "Your personal data"
+msgstr "Zure informazio pertsonala"
+
+#: templates/profile/edit_personal.html:10
+msgid "Save"
+msgstr "Gorde"
+
+#: templates/profile/edit_photo.html:7
+msgid "User's photo"
+msgstr "Erabiltzailearen argazkia"
+
+#: templates/profile/edit_photo.html:9
+msgid "You don't have a photo yet"
+msgstr "Oraindik ez duzu argazkirik"
+
+#: templates/profile/edit_photo.html:11
+msgid "New photo"
+msgstr "Argazki berria"
+
+#: templates/profile/edit_photo.html:15
+msgid "Change photo"
+msgstr "Argazkia aldatu"
+
+#: templates/profile/edit_social.html:10
+msgid "Twitter linked"
+msgstr "Twitterrekin lotuta"
+
+#: templates/profile/edit_social.html:12
+msgid "Link Twitter for this user"
+msgstr "Lotu Twitter erabiltzaile honi"
+
+#: templates/profile/edit_social.html:18
+msgid "Facebook linked"
+msgstr "Facebookekin lotuta"
+
+#: templates/profile/edit_social.html:20
+msgid "Link Facebook for this user"
+msgstr "Lotu Facebook erabiltzaile honi"
+
+#: templates/registration/activate.html:6
+msgid "Your account has been activated"
+msgstr "Zure kontua aktibatua izan da"
+
+#: templates/registration/activate.html:8
+msgid ""
+"Your account has been properly created. You can use the username and "
+"password that you entered"
+msgstr ""
+"Zure erabiltzaile kontua egoki sortu da. Orain erabiltzaile eta pasahitza "
+"erabili ditzazkezu"
+
+#: templates/registration/activate.html:9
+msgid "to login in the site"
+msgstr "webgunean sartzeko"
+
+#: templates/registration/activate.html:13
+msgid "Your account could not be activated"
+msgstr "Ezin izan dugu zure erabiltzaile kontua aktibatu"
+
+#: templates/registration/activate.html:15
+msgid ""
+"We had a problem while activating your account. The link was probably "
+"outdated. Please, try again"
+msgstr ""
+"Arazo bat izan dugu zure kontua aktibatzean. Balitek lotura zaharkituta "
+"izatea. Mesedez, saiatu berriro"
+
+#: templates/registration/activation_complete.html:6
+msgid "Your account has been successfully activated"
+msgstr "Zure kontua aktibatua izan da"
+
+#: templates/registration/activation_complete.html:8
+msgid ""
+"Your account is activated. Now you can login with the username and password "
+"you provided"
+msgstr ""
+"Zure erabiltzaile kontua egoki sortu da. Orain erabiltzaile eta pasahitza "
+"erabili ditzazkezu"
+
+#: templates/registration/activation_complete.html:10
+#: templates/registration/login.html:26
+msgid "Log in"
+msgstr "Sartu"
+
+#: templates/registration/activation_email.txt:4
+msgid "Hello"
+msgstr "Kaixo"
+
+#: templates/registration/activation_email.txt:6
+#, python-format
+msgid "You have requested joining %(sitename)s."
+msgstr "%(sitename)s webgunean sarrera eskatu duzu."
+
+#: templates/registration/activation_email.txt:8
+#, python-format
+msgid "Please click in this activation link before %(expirationdays)s days:"
+msgstr ""
+"Mesedez, klik egin aktibazio lotura honetan %(expirationdays)s egun baino "
+"lehen:"
+
+#: templates/registration/activation_email.txt:12
+#: templates/registration/password_reset_email.txt:12
+#, fuzzy, python-format
+msgid "The team at %(site_name)s."
+msgstr "%(sitename)s-ko lan taldea."
+
+#: templates/registration/activation_email_subject.txt:1
+msgid "Account activation on"
+msgstr "Erabiltzaile kontu aktibazioa:"
+
+#: templates/registration/login.html:6 templates/registration/login.html:43
+msgid "Sign in"
+msgstr "Sartu"
+
+#: templates/registration/login.html:9 templates/registration/login.html:51
+msgid "I'm new here. Create account"
+msgstr "Berria naiz hemen. Sortu kontu bat"
+
+#: templates/registration/login.html:10
+#: templates/registration/registration_form.html:42
+msgid "Create account"
+msgstr "Erabiltzaile kontua sortzea"
+
+#: templates/registration/login.html:13
+msgid "Sign in using Facebook or Twitter"
+msgstr "Twitter edo Facebook bidez sartu"
+
+#: templates/registration/login.html:18
+msgid "You can use your Facebook or Twitter accounts to log in"
+msgstr "Facebook edo Twitter-en bidez sar zaitezke."
+
+#: templates/registration/login.html:29
+#: templates/registration/registration_form.html:7
+msgid "You are already logged in"
+msgstr "Jadanik barruan zaude."
+
+#: templates/registration/login.html:35
+msgid "Your username and password do not match. Please try again."
+msgstr "Zure erabiltzaile eta pasahitza ez datoz bat. Saiatu berriro mesedez."
+
+#: templates/registration/login.html:38
+#: templates/registration/registration_form.html:21
+msgid "Username"
+msgstr "Erabiltzailea"
+
+#: templates/registration/login.html:40
+#: templates/registration/registration_form.html:32
+msgid "Password"
+msgstr "Pasahitza"
+
+#: templates/registration/login.html:50
+msgid "I have forgotten my password"
+msgstr "Nire pasahitza ahaztu dut"
+
+#: templates/registration/password_reset.html:5
+#: templates/registration/password_reset_done.html:4
+msgid "Reset password"
+msgstr "Pasahitza berrezarri"
+
+#: templates/registration/password_reset.html:7
+msgid "Enter your email to reset your password"
+msgstr "Sartu zure eposta pasahitza berrezarri dezagun"
+
+#: templates/registration/password_reset.html:14
+#: templates/registration/password_reset_confirm.html:12
+#: templates/registration/password_reset_form.html:14
+msgid "Submit"
+msgstr "Bidali"
+
+#: templates/registration/password_reset_complete.html:4
+msgid "You have reset your password"
+msgstr "Pasahitza berrezarri duzu"
+
+#: templates/registration/password_reset_confirm.html:7
+msgid "New password"
+msgstr "Pasahitz berria"
+
+#: templates/registration/password_reset_confirm.html:8
+msgid "Please enter twice the new password"
+msgstr "Mesedez emaiguzu bi aldiz pasahitza"
+
+#: templates/registration/password_reset_confirm.html:17
+msgid "Password reset failed"
+msgstr "Pasahitza berrezartzeak huts egin du"
+
+#: templates/registration/password_reset_done.html:7
+msgid ""
+"We have sent to your email the needed information to reset your password"
+msgstr ""
+"Mezu bat bidali dizugu pasahitza berrezartzeko beharrezko informazioarekin"
+
+#: templates/registration/password_reset_email.txt:4
+#, python-format
+msgid ""
+"You are receiving this email because you requested resetting the password at "
+"%(site_name)s."
+msgstr ""
+"Mezu hau bidali dizugu, %(site_name)s webgunean pasahitza berrezartzea "
+"eskatu duzulako."
+
+#: templates/registration/password_reset_email.txt:6
+msgid "All you have to do is click in this link and set your new password:"
+msgstr ""
+"Egin behar duzun guztia, lotura honetan klik egin eta zure pasahitza "
+"ezartzea da:"
+
+#: templates/registration/password_reset_email.txt:10
+#, python-format
+msgid "Remember that you used the username: %(username)s."
+msgstr "Gogoratu zure erabiltzailea hau dela: %(username)s."
+
+#: templates/registration/password_reset_form.html:5
+msgid "Reset your password"
+msgstr "Pasahitza berrezarri"
+
+#: templates/registration/password_reset_form.html:7
+msgid "Please write your email to reset your password"
+msgstr "Sartu zure eposta pasahitza berrezartzeko"
+
+#: templates/registration/registration_complete.html:4
+msgid "Activate your account"
+msgstr "Aktibatu zure erabiltzaile kontua"
+
+#: templates/registration/registration_complete.html:7
+msgid ""
+"In order to confirm your email, we have sent you by email the needed "
+"information to activate your account. Please, read your email and activate "
+"your account."
+msgstr ""
+"Zure helbidea konfirmatzeko, epostaz bidali dizugu zure erabiltzaile kontua "
+"aktibatzeko beharrezkoa den informazioa. Mesedez, begiratu zure eposta eta "
+"aktibatu zure erabiltzaile kontua"
+
+#: templates/registration/registration_complete.html:9
+msgid "Check your email."
+msgstr "Begiratu zure eposta."
+
+#: templates/registration/registration_complete.html:10
+msgid "Remember:"
+msgstr "Gogoratu"
+
+#: templates/registration/registration_complete.html:12
+msgid "Check your spam folder if you don't find our email."
+msgstr "Begiratu spam karpetan, ez baduzu mezua aurkitzen."
+
+#: templates/registration/registration_complete.html:13
+msgid "Contact us if you don't receive the email."
+msgstr "Jarri gurekin harremanetan ez baduzu eposta aurkitzen."
+
+#: templates/registration/registration_form.html:5
+msgid "Register"
+msgstr "Izena eman"
+
+#: templates/registration/registration_form.html:27
+msgid "Email"
+msgstr "Eposta"
+
+#: templates/registration/registration_form.html:37
+msgid "Confirm password"
+msgstr "Pasahitza konfirmatu"
+
+#: templates/registration/registration_form.html:50
+msgid "Register using Facebook or Twitter"
+msgstr "Facebook edo Twitter erabiliz sartu"
+
+#~ msgid "Espanol"
+#~ msgstr "Español"
+
+#~ msgid "Euskara"
+#~ msgstr "Euskara"
+
+#~ msgid "%(parentcatname)s: %(childcatname)s in %(cityname)s"
+#~ msgstr "%(parentcatname)s: %(childcatname)s (%(cityname)s)"
+
+#~ msgid "cat_%s"
+#~ msgstr "cat_%s"
+
+#~ msgid "%(parentcatname)s in %(cityname)s"
+#~ msgstr "%(parentcatname)s (%(cityname)s)"
+
+#~ msgid "aphysic"
+#~ msgstr "Fisikoa"
+
+#~ msgid "avisual"
+#~ msgstr "Ikusizkoa"
+
+#~ msgid "aaudio"
+#~ msgstr "Entzutezkoa"
+
+#~ msgid "aintelec"
+#~ msgstr "Intelektuala"
+
+#~ msgid "aorganic"
+#~ msgstr "Organikoa"
+
+#~ msgid "About"
+#~ msgstr "Honi buruz"
+
+#~ msgid "Ararteko maps"
+#~ msgstr "Ararteko mapak"
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#~ msgid "About the maps"
+#~ msgstr "Mapa hauen inguruan"
+
+#~ msgid "About: Paragraph 1"
+#~ msgstr ""
+#~ "Informa zaitez nahi duzun lekura iristeko! Zure laguntzarekin, erraz "
+#~ "iristeko moduko gune gehiago lortuko ditugu…"
+
+#~ msgid "About: Paragraph 2"
+#~ msgstr ""
+#~ "Arartekoaren laguntza-mapek tokiak geografian kokatzen lagunduko digute, "
+#~ "zuen ekarpenekin. Hemen aurkezten dizuegun honetan, gune turistikoak, "
+#~ "garraiokoak,  liburutegiak… bildu ditugu. Egin itzazu iruzkinak horien "
+#~ "erabilgarritasunaz! Bertan agertzen den informazioa irekia eta "
+#~ "berrerabilgarria da. Erabil ezazu."
+
+#~ msgid "Discover and share accessible places"
+#~ msgstr "Aurkitu eta ezagutarazi toki irisgarriak"
+
+#~ msgid "Go to..."
+#~ msgstr "Nora joan:"
+
+#~ msgid "Search"
+#~ msgstr "Bilatu"
+
+#~ msgid "Accessibility"
+#~ msgstr "Irisgarritasuna"
+
+#~ msgid "Project supported by"
+#~ msgstr "Proiektuaren bultzatzailea"
+
+#~ msgid "tell us what you think"
+#~ msgstr "esaiguzu zer iruditzen zaizun"
+
+#~ msgid "Comment"
+#~ msgstr "Iruzkindu"
+
+#~ msgid "Add comment"
+#~ msgstr "Gehitu iruzkina"
+
+#~ msgid "Login to comment"
+#~ msgstr "Sartu iruzkinak bidaltzeko"
+
+#~ msgid "cat_tourism"
+#~ msgstr "Turismoa"
+
+#~ msgid "cat_sleep"
+#~ msgstr "Ostatua"
+
+#~ msgid "cat_hotel"
+#~ msgstr "Hotela"
+
+#~ msgid "cat_agroturismo"
+#~ msgstr "Nekazalturismoa"
+
+#~ msgid "cat_apartamento"
+#~ msgstr "Apartamentuak"
+
+#~ msgid "cat_camping"
+#~ msgstr "Kanpina"
+
+#~ msgid "cat_casa-particular"
+#~ msgstr "Etxe partikularra"
+
+#~ msgid "cat_casa-rural"
+#~ msgstr "Landetxea"
+
+#~ msgid "cat_hotel-apartamento"
+#~ msgstr "Hotel-apartamentuak"
+
+#~ msgid "cat_pension"
+#~ msgstr "Pentsioa"
+
+#~ msgid "cat_eat"
+#~ msgstr "Jatea"
+
+#~ msgid "cat_restaurant"
+#~ msgstr "Jatetxea"
+
+#~ msgid "cat_sidreria"
+#~ msgstr "Sagardotegia"
+
+#~ msgid "cat_asador"
+#~ msgstr "Erretegia"
+
+#~ msgid "cat_transportation"
+#~ msgstr "Garraioa"
+
+#~ msgid "cat_bus"
+#~ msgstr "Autobusa"
+
+#~ msgid "cat_train"
+#~ msgstr "Trena"
+
+#~ msgid "cat_tram"
+#~ msgstr "Tranbia"
+
+#~ msgid "cat_culture"
+#~ msgstr "Kultura"
+
+#~ msgid "cat_library"
+#~ msgstr "Liburutegia"
+
+#~ msgid "cat_museum"
+#~ msgstr "Museoa"
+
+#~ msgid "access_a"
+#~ msgstr "Irisgarria"
+
+#~ msgid "access_p"
+#~ msgstr "Erabilgarria"
+
+#~ msgid "access_n"
+#~ msgstr "Ez irisgarria"
+
+#~ msgid "acceso_bbdd"
+#~ msgstr "Datubaseetara sarrera"
+
+#~ msgid "prestamo"
+#~ msgstr "Mailegua"
+
+#~ msgid "hemeroteca"
+#~ msgstr "Hemeroteka"
+
+#~ msgid "consulta"
+#~ msgstr "Kontsulta"
+
+#~ msgid "wifi"
+#~ msgstr "Wi-fi"
+
+#~ msgid "reprografia"
+#~ msgstr "Erreprografia"
+
+#~ msgid "infor_bibliografica"
+#~ msgstr "Informazio bibliografikoa"
+
+#~ msgid "prestamo_domic"
+#~ msgstr "Etxerako mailegua"
+
+#~ msgid "internet_usuarios"
+#~ msgstr "Internet erabiltzaileentzat"
+
+#~ msgid "prestamo_inter"
+#~ msgstr "Liburutegi arteko mailegua"
+
+#~ msgid "general"
+#~ msgstr "Orokorra"
+
+#~ msgid "ayto"
+#~ msgstr "Udala"
+
+#~ msgid "auto"
+#~ msgstr "Autonomoa"
+
+#~ msgid "priv"
+#~ msgstr "Pribatua"
+
+#~ msgid "l"
+#~ msgstr "Librea"
+
+#~ msgid "r"
+#~ msgstr "Mugatua"
+
+#~ msgid "p"
+#~ msgstr "Publikoa"
+
+#~ msgid "Visit this places"
+#~ msgstr "Bisitatu toki hauek"
+
+#~ msgid "Last places"
+#~ msgstr "Azken tokiak"
+
+#~ msgid "Visit full %(cityname)s"
+#~ msgstr "Bisitatu %(cityname)s osoa"
+
+#~ msgid "Website"
+#~ msgstr "Webgunea"
+
+#~ msgid "detailed file"
+#~ msgstr "Fitxa zehatza"
+
+#~ msgid "Library"
+#~ msgstr "Liburutegia"
+
+#~ msgid "btype"
+#~ msgstr "Mota"
+
+#~ msgid "start_year"
+#~ msgstr "Irekiera urtea"
+
+#~ msgid "institution"
+#~ msgstr "Erakundea"
+
+#~ msgid "open_times"
+#~ msgstr "Ordutegia"
+
+#~ msgid "access_type"
+#~ msgstr "Sarrera mota"
+
+#~ msgid "center_type"
+#~ msgstr "Zentru mota"
+
+#~ msgid "topics"
+#~ msgstr "Gaiak"
+
+#~ msgid "services"
+#~ msgstr "Zerbitzuak"
+
+#~ msgid "Comments"
+#~ msgstr "Iruzkinak"
+
+#~ msgid "Map"
+#~ msgstr "Mapa"
+
+#~ msgid "Nearest places"
+#~ msgstr "Gertuko tokiak"
+
+#~ msgid "Search results"
+#~ msgstr "Bilaketa"
+
+#~ msgid "Previous"
+#~ msgstr "Aurrekoak"
+
+#~ msgid "Next"
+#~ msgstr "Hurrengoak"
+
+#~ msgid "Sign out"
+#~ msgstr "Irten"

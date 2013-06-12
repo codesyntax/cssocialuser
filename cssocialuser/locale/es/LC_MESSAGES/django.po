@@ -1,0 +1,628 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-21 16:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: forms.py:14
+msgid "Your picture"
+msgstr "Tu fotografía"
+
+#: forms.py:14
+msgid "Please upload a picture of you. Supported formats: jpg, png, gif."
+msgstr "Por favor, carga una foto tuya. Formatos soportados: jpg, png, gif."
+
+#: forms.py:23
+#, python-format
+msgid ""
+"The name of the picture (%s) has an unsupported character. Please rename it "
+"before uploading."
+msgstr ""
+"El nombre del fichero (%s) tiene un caracter no soportado. Por favor "
+"renómbraloantes de cargarlo"
+
+#: forms.py:27
+msgid ""
+"The picture is not in one of our supported formats. We don't support BMP "
+"files. Please change it"
+msgstr ""
+"La imagen no está en uno de nuestros formatos soportados. No podemos "
+"utilizar ficheros BMP. Por favor modifícalo antes de cargarlo"
+
+#: models.py:24
+msgid "Full name"
+msgstr "Nombre completo"
+
+#: models.py:25
+msgid "Biography/description"
+msgstr "Biografía/descripción"
+
+#: views.py:35
+msgid "New user data saved."
+msgstr "Se ha guardado los datos del usuario"
+
+#: templates/cssocialprofile/header_useroptions.html:5
+msgid "User's picture"
+msgstr "Foto del usuario"
+
+#: templates/cssocialprofile/header_useroptions.html:8
+msgid "Profile"
+msgstr "Perfil"
+
+#: templates/cssocialprofile/header_useroptions.html:9
+msgid "Logout"
+msgstr "Salir"
+
+#: templates/cssocialprofile/header_useroptions.html:12
+msgid "Login"
+msgstr "Entrar"
+
+#: templates/profile/base.html:8
+msgid "Account"
+msgstr "Cuenta"
+
+#: templates/profile/base.html:10
+msgid "Basic account"
+msgstr "Datos básicos"
+
+#: templates/profile/base.html:11 templates/profile/edit_photo.html:5
+msgid "Photo"
+msgstr "Foto"
+
+#: templates/profile/base.html:12 templates/profile/edit_social.html:5
+msgid "Social networks"
+msgstr "Redes sociales"
+
+#: templates/profile/edit_personal.html:5
+msgid "Your personal data"
+msgstr "Tus datos personales"
+
+#: templates/profile/edit_personal.html:10
+msgid "Save"
+msgstr "Guardar"
+
+#: templates/profile/edit_photo.html:7
+msgid "User's photo"
+msgstr "Foto del usuario"
+
+#: templates/profile/edit_photo.html:9
+msgid "You don't have a photo yet"
+msgstr "Todavía no tienes foto"
+
+#: templates/profile/edit_photo.html:11
+msgid "New photo"
+msgstr "Nueva foto"
+
+#: templates/profile/edit_photo.html:15
+msgid "Change photo"
+msgstr "Cambiar foto"
+
+#: templates/profile/edit_social.html:10
+msgid "Twitter linked"
+msgstr "Enlazado con Twitter"
+
+#: templates/profile/edit_social.html:12
+msgid "Link Twitter for this user"
+msgstr "Enlazar Twitter a este usuario"
+
+#: templates/profile/edit_social.html:18
+msgid "Facebook linked"
+msgstr "Enlazado con Facebook"
+
+#: templates/profile/edit_social.html:20
+msgid "Link Facebook for this user"
+msgstr "Enlazar Facebook a este usuario"
+
+#: templates/registration/activate.html:6
+msgid "Your account has been activated"
+msgstr "Tu cuenta ha sido activada"
+
+#: templates/registration/activate.html:8
+msgid ""
+"Your account has been properly created. You can use the username and "
+"password that you entered"
+msgstr ""
+"Tu cuenta ya ha sido creada. Ahora puedes utilizar el usuario y lacontraseña "
+"que nos has dado"
+
+#: templates/registration/activate.html:9
+msgid "to login in the site"
+msgstr "para entrar en el sitio web"
+
+#: templates/registration/activate.html:13
+msgid "Your account could not be activated"
+msgstr "Tu cuenta no ha podido ser activada"
+
+#: templates/registration/activate.html:15
+msgid ""
+"We had a problem while activating your account. The link was probably "
+"outdated. Please, try again"
+msgstr ""
+"Hemos tenido un problema con la activación de tu cuenta. Puede que "
+"estécaducada. Inténtalo otra vez, por favor."
+
+#: templates/registration/activation_complete.html:6
+msgid "Your account has been successfully activated"
+msgstr "Tu cuenta ha sido activada"
+
+#: templates/registration/activation_complete.html:8
+msgid ""
+"Your account is activated. Now you can login with the username and password "
+"you provided"
+msgstr ""
+"Tu cuenta ya ha sido creada. Ahora puedes utilizar el usuario y lacontraseña "
+"que nos has dado"
+
+#: templates/registration/activation_complete.html:10
+#: templates/registration/login.html:26
+msgid "Log in"
+msgstr "Entrar"
+
+#: templates/registration/activation_email.txt:4
+msgid "Hello"
+msgstr "Hola"
+
+#: templates/registration/activation_email.txt:6
+#, python-format
+msgid "You have requested joining %(sitename)s."
+msgstr "Has solicitado el registro en %(sitename)s."
+
+#: templates/registration/activation_email.txt:8
+#, python-format
+msgid "Please click in this activation link before %(expirationdays)s days:"
+msgstr ""
+"Por favor, haz click en este enlace de activación antes de "
+"%(expirationdays)s días:"
+
+#: templates/registration/activation_email.txt:12
+#: templates/registration/password_reset_email.txt:12
+#, python-format
+msgid "The team at %(site_name)s."
+msgstr "El equipo de %(site_name)s."
+
+#: templates/registration/activation_email_subject.txt:1
+msgid "Account activation on"
+msgstr "Activación de la cuenta de"
+
+#: templates/registration/login.html:6 templates/registration/login.html:43
+msgid "Sign in"
+msgstr "Entrar"
+
+#: templates/registration/login.html:9 templates/registration/login.html:51
+msgid "I'm new here. Create account"
+msgstr "Soy nuevo aquí. Crear cuenta"
+
+#: templates/registration/login.html:10
+#: templates/registration/registration_form.html:42
+msgid "Create account"
+msgstr "Crear una cuenta"
+
+#: templates/registration/login.html:13
+msgid "Sign in using Facebook or Twitter"
+msgstr "Entrar utilizando Facebook o Twitter"
+
+#: templates/registration/login.html:18
+msgid "You can use your Facebook or Twitter accounts to log in"
+msgstr "Puedes utilizar tu cuenta de Twitter o Facebook para entrar"
+
+#: templates/registration/login.html:29
+#: templates/registration/registration_form.html:7
+msgid "You are already logged in"
+msgstr "Ya estás dentro"
+
+#: templates/registration/login.html:35
+msgid "Your username and password do not match. Please try again."
+msgstr "Tu usuario y contraseña no coinciden. Por favor inténtalo otra vez."
+
+#: templates/registration/login.html:38
+#: templates/registration/registration_form.html:21
+msgid "Username"
+msgstr "Usuario"
+
+#: templates/registration/login.html:40
+#: templates/registration/registration_form.html:32
+msgid "Password"
+msgstr "Contraseña"
+
+#: templates/registration/login.html:50
+msgid "I have forgotten my password"
+msgstr "He olvidado mi contraseña"
+
+#: templates/registration/password_reset.html:5
+#: templates/registration/password_reset_done.html:4
+msgid "Reset password"
+msgstr "Cambiar la contraseña"
+
+#: templates/registration/password_reset.html:7
+msgid "Enter your email to reset your password"
+msgstr "Introduce tu email para cambiar la contraseña"
+
+#: templates/registration/password_reset.html:14
+#: templates/registration/password_reset_confirm.html:12
+#: templates/registration/password_reset_form.html:14
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/registration/password_reset_complete.html:4
+msgid "You have reset your password"
+msgstr "Has cambiado tu contraseña"
+
+#: templates/registration/password_reset_confirm.html:7
+msgid "New password"
+msgstr "Nueva contraseña"
+
+#: templates/registration/password_reset_confirm.html:8
+msgid "Please enter twice the new password"
+msgstr "Por favor, introduce dos veces la contraseña"
+
+#: templates/registration/password_reset_confirm.html:17
+msgid "Password reset failed"
+msgstr "Falló la recuperación de la contraseña"
+
+#: templates/registration/password_reset_done.html:7
+msgid ""
+"We have sent to your email the needed information to reset your password"
+msgstr ""
+"Te hemos enviado un email con la información necesaria para cambiar la "
+"contraseña"
+
+#: templates/registration/password_reset_email.txt:4
+#, python-format
+msgid ""
+"You are receiving this email because you requested resetting the password at "
+"%(site_name)s."
+msgstr ""
+"Recibes este mensaje porque has solicitado cambiar la contraseña en "
+"%(site_name)s."
+
+#: templates/registration/password_reset_email.txt:6
+msgid "All you have to do is click in this link and set your new password:"
+msgstr ""
+"Sólo tienes que hacer click en este enlace y definir tu nueva contraseña:"
+
+#: templates/registration/password_reset_email.txt:10
+#, python-format
+msgid "Remember that you used the username: %(username)s."
+msgstr "Recuerda que has utilizado el usuario: %(username)s."
+
+#: templates/registration/password_reset_form.html:5
+msgid "Reset your password"
+msgstr "Cambiar la contraseña"
+
+#: templates/registration/password_reset_form.html:7
+msgid "Please write your email to reset your password"
+msgstr "Por favor, escribe tu email para cambiar la contraseña"
+
+#: templates/registration/registration_complete.html:4
+msgid "Activate your account"
+msgstr "Activa tu cuenta"
+
+#: templates/registration/registration_complete.html:7
+msgid ""
+"In order to confirm your email, we have sent you by email the needed "
+"information to activate your account. Please, read your email and activate "
+"your account."
+msgstr ""
+"Con objeto de confirmar tu email, te hemos enviado un mensaje con toda la "
+"información necesaria para activar tu cuenta. Por favor, revisa tu email y "
+"activa la cuenta"
+
+#: templates/registration/registration_complete.html:9
+msgid "Check your email."
+msgstr "Mira tu email."
+
+#: templates/registration/registration_complete.html:10
+msgid "Remember:"
+msgstr "Recuerda"
+
+#: templates/registration/registration_complete.html:12
+msgid "Check your spam folder if you don't find our email."
+msgstr "Mira también en la carpeta de spam si no encuentras el mensaje"
+
+#: templates/registration/registration_complete.html:13
+msgid "Contact us if you don't receive the email."
+msgstr "Contacta con nosotros si definitivamente no encuentras el mensaje."
+
+#: templates/registration/registration_form.html:5
+msgid "Register"
+msgstr "Registro"
+
+#: templates/registration/registration_form.html:27
+msgid "Email"
+msgstr "Email"
+
+#: templates/registration/registration_form.html:37
+msgid "Confirm password"
+msgstr "Confirma la contraseña"
+
+#: templates/registration/registration_form.html:50
+msgid "Register using Facebook or Twitter"
+msgstr "Regístrate utilizando Facebook o Twitter"
+
+#~ msgid "Espanol"
+#~ msgstr "Español"
+
+#~ msgid "Euskara"
+#~ msgstr "Euskara"
+
+#~ msgid "%(parentcatname)s: %(childcatname)s in %(cityname)s"
+#~ msgstr "%(parentcatname)s: %(childcatname)s en %(cityname)s"
+
+#~ msgid "cat_%s"
+#~ msgstr "cat_%s"
+
+#~ msgid "%(parentcatname)s in %(cityname)s"
+#~ msgstr "%(parentcatname)s en %(cityname)s"
+
+#~ msgid "aphysic"
+#~ msgstr "Física"
+
+#~ msgid "avisual"
+#~ msgstr "Visual"
+
+#~ msgid "aaudio"
+#~ msgstr "Auditiva"
+
+#~ msgid "aintelec"
+#~ msgstr "Intelectual"
+
+#~ msgid "aorganic"
+#~ msgstr "Orgánica"
+
+#~ msgid "About"
+#~ msgstr "Sobre esto"
+
+#~ msgid "Ararteko maps"
+#~ msgstr "Mapas de Ararteko"
+
+#~ msgid "Home"
+#~ msgstr "Home"
+
+#~ msgid "About the maps"
+#~ msgstr "Sobre los mapas"
+
+#~ msgid "About: Paragraph 1"
+#~ msgstr ""
+#~ "¡Infórmate para llegar a donde quieres! Con tu colaboración conseguiremos "
+#~ "unos espacios más accesibles…"
+
+#~ msgid "About: Paragraph 2"
+#~ msgstr ""
+#~ "Los mapas  colaborativos del Ararteko  nos van a  ayudar a geolocalizar "
+#~ "con vuestras aportaciones.  En este que os presentamos hemos reunido "
+#~ "puntos turísticos, de transporte, bibliotecas… ¡Comenta  sobre su "
+#~ "accesibilidad! La información que contiene es abierta y reutilizable. "
+#~ "Úsala. "
+
+#~ msgid "Discover and share accessible places"
+#~ msgstr "Descubre y comparte lugares accesibles"
+
+#~ msgid "Go to..."
+#~ msgstr "Ir a..."
+
+#~ msgid "Search"
+#~ msgstr "Buscar"
+
+#~ msgid "Accessibility"
+#~ msgstr "Accesibilidad"
+
+#~ msgid "Project supported by"
+#~ msgstr "Proyecto impulsado por"
+
+#~ msgid "tell us what you think"
+#~ msgstr "dinos lo que piensas"
+
+#~ msgid "Comment"
+#~ msgstr "Comenta"
+
+#~ msgid "Add comment"
+#~ msgstr "Añadir comentario"
+
+#~ msgid "Login to comment"
+#~ msgstr "Entra para comentar"
+
+#~ msgid "cat_tourism"
+#~ msgstr "Turismo"
+
+#~ msgid "cat_sleep"
+#~ msgstr "Alojamiento"
+
+#~ msgid "cat_hotel"
+#~ msgstr "Hotel"
+
+#~ msgid "cat_agroturismo"
+#~ msgstr "Agroturismo"
+
+#~ msgid "cat_apartamento"
+#~ msgstr "Apartamentos"
+
+#~ msgid "cat_camping"
+#~ msgstr "Camping"
+
+#~ msgid "cat_casa-particular"
+#~ msgstr "Casa particular"
+
+#~ msgid "cat_casa-rural"
+#~ msgstr "Casa rural"
+
+#~ msgid "cat_hotel-apartamento"
+#~ msgstr "Hotel-apartamento"
+
+#~ msgid "cat_pension"
+#~ msgstr "Pensión"
+
+#~ msgid "cat_eat"
+#~ msgstr "Comer"
+
+#~ msgid "cat_restaurant"
+#~ msgstr "Restaurante"
+
+#~ msgid "cat_sidreria"
+#~ msgstr "Sidrería"
+
+#~ msgid "cat_asador"
+#~ msgstr "Asador"
+
+#~ msgid "cat_transportation"
+#~ msgstr "Transporte"
+
+#~ msgid "cat_bus"
+#~ msgstr "Autobús"
+
+#~ msgid "cat_train"
+#~ msgstr "Tren"
+
+#~ msgid "cat_tram"
+#~ msgstr "Tranvía"
+
+#~ msgid "cat_culture"
+#~ msgstr "Cultura"
+
+#~ msgid "cat_library"
+#~ msgstr "Biblioteca"
+
+#~ msgid "cat_museum"
+#~ msgstr "Museo"
+
+#~ msgid "access_a"
+#~ msgstr "Accesible"
+
+#~ msgid "access_p"
+#~ msgstr "Practicable"
+
+#~ msgid "access_n"
+#~ msgstr "No accesible"
+
+#~ msgid "acceso_bbdd"
+#~ msgstr "Acceso a bases de datos"
+
+#~ msgid "prestamo"
+#~ msgstr "Préstamo"
+
+#~ msgid "hemeroteca"
+#~ msgstr "Hemeroteca"
+
+#~ msgid "consulta"
+#~ msgstr "Consulta"
+
+#~ msgid "wifi"
+#~ msgstr "Wi-fi"
+
+#~ msgid "reprografia"
+#~ msgstr "Reprografía"
+
+#~ msgid "infor_bibliografica"
+#~ msgstr "Información bibliográfica"
+
+#~ msgid "prestamo_domic"
+#~ msgstr "Préstamo domiciliario"
+
+#~ msgid "internet_usuarios"
+#~ msgstr "Internet para usuarios"
+
+#~ msgid "prestamo_inter"
+#~ msgstr "Préstamo interbibliotecario"
+
+#~ msgid "general"
+#~ msgstr "General"
+
+#~ msgid "ayto"
+#~ msgstr "Ayuntamiento"
+
+#~ msgid "auto"
+#~ msgstr "Autónomo"
+
+#~ msgid "priv"
+#~ msgstr "Privado"
+
+#~ msgid "l"
+#~ msgstr "Libre"
+
+#~ msgid "r"
+#~ msgstr "Restringido"
+
+#~ msgid "p"
+#~ msgstr "Público"
+
+#~ msgid "Visit this places"
+#~ msgstr "Visita estos lugares:"
+
+#~ msgid "Last places"
+#~ msgstr "Últimos lugares"
+
+#~ msgid "Visit full %(cityname)s"
+#~ msgstr "Visita %(cityname)s completa"
+
+#~ msgid "Website"
+#~ msgstr "Sitio web"
+
+#~ msgid "detailed file"
+#~ msgstr "Ficha detallada"
+
+#~ msgid "Library"
+#~ msgstr "Biblioteca"
+
+#~ msgid "btype"
+#~ msgstr "Tipo"
+
+#~ msgid "start_year"
+#~ msgstr "Año apertura"
+
+#~ msgid "institution"
+#~ msgstr "Institución"
+
+#~ msgid "open_times"
+#~ msgstr "Horario"
+
+#~ msgid "access_type"
+#~ msgstr "Tipo de acceso"
+
+#~ msgid "center_type"
+#~ msgstr "Tipo de centro"
+
+#~ msgid "topics"
+#~ msgstr "Temas"
+
+#~ msgid "services"
+#~ msgstr "Servicios"
+
+#~ msgid "Comments"
+#~ msgstr "Comentarios"
+
+#~ msgid "Map"
+#~ msgstr "Mapa"
+
+#~ msgid "Nearest places"
+#~ msgstr "Lugares cercanos"
+
+#~ msgid "Search results"
+#~ msgstr "Buscar"
+
+#~ msgid "Previous"
+#~ msgstr "Anteriores"
+
+#~ msgid "Next"
+#~ msgstr "Siguientes"
+
+#~ msgid "Sign out"
+#~ msgstr "Salir"
+
+#~ msgid "Tus datos personales"
+#~ msgstr "Perfil"
+
+#~ msgid "Enlazar Facebook para este usuario"
+#~ msgstr "Entrar utilizando Facebook o Twitter"

@@ -1,0 +1,20 @@
+{% extends "registration/base.html" %}
+{% load i18n %}
+{% block cscontent %}
+
+{% if account %}
+<h1>{% trans "Your account has been activated" %}</h1>
+<p>
+{% trans "Your account has been properly created. You can use the username and password that you entered" %} 
+<a href="{% url cssocialprofile_user_login %}">{% trans "to login in the site" %}</a>
+</p>
+
+{% else %}
+<h1>{% trans "Your account could not be activated" %}</h1>
+<p>
+{% trans "We had a problem while activating your account. The link was probably outdated. Please, try again" %}
+</p>
+   {% endif %}
+{% endblock %}
+{% block cssidebar %}
+{% endblock %}
