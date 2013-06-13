@@ -50,7 +50,6 @@ class MyUserManager(BaseUserManager):
         u.save(using=self._db)
         return u
 
-   
 class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
 
     username = models.CharField(max_length=254, unique=True, blank=True, null=True)
@@ -190,3 +189,5 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
     class Meta:
         abstract = True
 
+class CSSocialUser(CSAbstractSocialUser):
+    pass
