@@ -3,7 +3,7 @@ from urllib2 import urlopen
 from django.template.defaultfilters import slugify
 from django.core.files.base import ContentFile
 
-from cssocialprofile.utils.slug import time_slug, time_slug_long, time_slug_string
+from cssocialuser.utils.slug import time_slug, time_slug_long, time_slug_string
 
 
 from random import  randint
