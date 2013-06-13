@@ -1,12 +1,12 @@
 from django import forms
 from django.contrib.auth.models import User
-from cssocialprofile.models import CSSocialProfile
+from cssocialuser.models import CSSocialUser
 from django.utils.translation import ugettext as _
 
 class ProfileForm(forms.ModelForm):
 
     class Meta:
-        model = CSSocialProfile
+        model = CSSocialUser
         fields = ('fullname','bio',)
         
 class ProfilePhotoForm(forms.Form):

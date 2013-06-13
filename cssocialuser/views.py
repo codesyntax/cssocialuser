@@ -10,14 +10,14 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 from photologue.models import Photo
-from cssocialprofile.forms import ProfileForm, ProfilePhotoForm
-from cssocialprofile.utils.slug import time_slug_string
+from cssocialuser.forms import ProfileForm, ProfilePhotoForm
+from cssocialuser.utils.slug import time_slug_string
 from django.utils.translation import ugettext as _
 
 def index(request):
     """ """
     h = {}
-    return render_to_response('cssocialprofile/base.html', h, context_instance=RequestContext(request))
+    return render_to_response('cssocialuser/base.html', h, context_instance=RequestContext(request))
     
         
         
@@ -26,14 +26,14 @@ def edit_profile(request):
     """ """
     tab = 'personal'
     user= request.user
-    profile = user.get_profile()
+    profile = user
     if request.method == 'POST':
          posta=request.POST.copy()     
          profileform = ProfileForm(posta, instance=profile)
          if profileform.is_valid():
             profileform.save()
             messages.add_message(request, messages.SUCCESS, _('New user data saved.'), fail_silently=True)    
-            return HttpResponseRedirect(reverse('cssocialprofile_edit_profile'))
+            return HttpResponseRedirect(reverse('cssocialuser_edit_profile'))
     else:
         profileform = ProfileForm(instance=profile)
 
@@ -55,7 +55,7 @@ def edit_profile_photo(request):
     """ """
     tab = 'photo'
     user = request.user    
-    profile = user.get_profile()
+    profile = user
     if request.method == 'POST':
         form = ProfilePhotoForm(request.POST, request.FILES)
         if form.is_valid():
@@ -73,7 +73,7 @@ def edit_profile_social(request):
     """ """
     tab = 'social'
     user = request.user    
-    profile = user.get_profile()
+    profile = user
     return render_to_response('profile/edit_social.html', locals(), context_instance=RequestContext(request))
         
 
