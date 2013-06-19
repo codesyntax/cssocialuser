@@ -19,26 +19,38 @@ DEFAULT_PROFILE_PHOTO = getattr(settings,'DEFAULT_PROFILE_PHOTO', 'anonymous-use
 
 def get_user_data(backend, details, response, social_user, uid, user, *args, **kwargs):
     if backend.__class__ == FacebookBackend:
-        user.facebook_extra_values(response, details, **kwargs)      
+        user.set_facebook_extra_values(response, details, **kwargs)      
     elif backend.__class__ == TwitterBackend:
-        user.twitter_extra_values(response, details, **kwargs)
+        user.set_twitter_extra_values(response, details, **kwargs)
     elif backend.__class__ == OpenIDBackend:
-        user.set_openid_extra_values(response, details, **kwargs)
-    return True    
+        user.set_set_openid_extra_values(response, details, **kwargs)
+    return {'social_user': social_user,
+            'user': social_user.user,
+            'new_association': True}
 
 
 class MyUserManager(BaseUserManager):
     def create_user(self, username, email=None, password=None, **extra_fields):
         now = timezone.now()
-        if not email:
-            raise ValueError('The given email must be set')
+        #if not email:
+        #    raise ValueError('The given email must be set')
 
         email = UserManager.normalize_email(email)
-        user = self.model(username=username, email=email,
-                          is_active=True, is_superuser=False,
-                          last_login=now, **extra_fields)
+        isUser=self.filter(username=username)
+        if email:
+            isEmail=self.filter(email=email, email__isnull=False)
+        else:
+            isEmail=None    
+        if isUser:
+            user=isUser[0]
+        elif isEmail:
+            user=isEmail[0]    
+        else:    
+            user = self.model(username=username, email=email,
+                              is_active=True, is_superuser=False,
+                              last_login=now, **extra_fields)
  
-        user.set_password(password)
+            user.set_password(password)
         user.save(using=self._db)
         return user
  
@@ -53,7 +65,7 @@ class MyUserManager(BaseUserManager):
 class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
 
     username = models.CharField(max_length=254, unique=True, blank=True, null=True)
-    email = models.EmailField(max_length=254, unique=True, db_index=True)
+    email = models.EmailField(max_length=254, blank=True, null=True)
     phone = models.CharField(_('Phone Number'), max_length=25, blank=True, null=True,)
 
     is_active = models.BooleanField(default=True)
@@ -76,14 +88,14 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
     added = models.DateTimeField(auto_now_add=True,editable=False)
     modified =models.DateTimeField(auto_now=True,editable=False)
 
-    #objects = MyUserManager()
+    objects = MyUserManager()
 
     USERNAME_FIELD = 'username'
 
     def get_facebook_photo(self, response):
         """ """
         import facebook.djangofb as facebook
-        import pdb;pdb.set_trace()
+
         facebook = facebook.Facebook(settings.FACEBOOK_API_KEY, settings.FACEBOOK_API_SECRET)
         uid = response.get('id')
         user_data = facebook.users.getInfo(uid, ['first_name', 'last_name','pic_big',])[0]
@@ -108,7 +120,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
             self.mota = 1
         if not self.photo:
             self.photo = self.get_facebook_photo(response)
-        self.username = slugify(user.username)
+        self.username = slugify(self.username)
         self.save()
         return True
 
