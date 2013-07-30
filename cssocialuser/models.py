@@ -91,6 +91,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
     objects = MyUserManager()
 
     USERNAME_FIELD = 'username'
+    REQUIRED_FIELDS = ['email',]
 
     def get_facebook_photo(self, response):
         """ """
