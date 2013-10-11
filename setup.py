@@ -22,7 +22,6 @@ Django 1.5ak earri dituen aldaketak inplementatzeko""",
           'django-social-auth',
           'django-registration',
           'tweepy',
-          'pyfacebook'
       ],
       entry_points="""
       # -*- Entry points: -*-
