@@ -1,16 +1,15 @@
-from django.db import models
-from django.contrib.auth.models import User
 from photologue.models import Photo
-from cssocialuser.utils.load_images import loadUrlImage
+from social_auth.backends.facebook import FacebookBackend
+from social_auth.backends.twitter import TwitterBackend
+from social_auth.backends import OpenIDBackend
+from django.db import models
 from django.conf import settings
 from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext as _
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin,UserManager
 from django.utils import timezone
-from social_auth.backends.facebook import FacebookBackend
-from social_auth.backends.twitter import TwitterBackend
-from social_auth.backends import OpenIDBackend
 
+from cssocialuser.utils.load_images import loadUrlImage
 USERTYPE_CHOICES = getattr(settings,'USERTYPE_CHOICES', ((0,'Erabiltzailea'),(1,'Kidea'),(2,'Nor publikoa'),(3,'Kazetaria'),(4,'Administratzailea')))
 AUTH_PROFILE_MODULE = getattr(settings,'AUTH_PROFILE_MODULE', 'cssocialuser.CSSocialUser')
 SOURCE_CHOICES = ((0,'-'),(1,'Register'),(2,'Twitter'),(3,'Facebook'),(4,'OpenId'),)
