@@ -1,3 +1,4 @@
+import facebook
 from photologue.models import Photo
 from social_auth.backends.facebook import FacebookBackend
 from social_auth.backends.twitter import TwitterBackend
@@ -94,15 +95,17 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
 
     def get_facebook_photo(self, response):
         """ """
-        import facebook.djangofb as facebook
-
-        facebook = facebook.Facebook(settings.FACEBOOK_API_KEY, settings.FACEBOOK_API_SECRET)
         uid = response.get('id')
-        user_data = facebook.users.getInfo(uid, ['first_name', 'last_name','pic_big',])[0]
-        if user_data:   
-            img_url = user_data['pic_big']
-            img_title = u'Facebook: ' + user_data['first_name'] + u' ' + user_data['last_name']
-            return loadUrlImage(img_url,img_title)
+        access_token = getattr(settings, 'FACEBOOK_ACCESS_TOKEN')
+        graph = facebook.GraphAPI(access_token)
+        extra_args = {'fields':['picture.width(500)','first_name','last_name']}
+        user_data = graph.get_object(uid,**extra_args)
+        first_name = user_data.get('first_name')
+        last_name = user_data.get('last_name')
+        photo_url = user_data.get('picture').get('data').get('url')
+        if photo_url:   
+            img_title = u'Facebook: ' + first_name + u' ' + last_name
+            return loadUrlImage(photo_url,img_title)
         else:
             return None
 
