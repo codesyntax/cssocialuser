@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-21 16:51+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: forms.py:14
+msgid "Your picture"
+msgstr ""
+
+#: forms.py:14
+msgid "Please upload a picture of you. Supported formats: jpg, png, gif."
+msgstr ""
+
+#: forms.py:23
+#, python-format
+msgid ""
+"The name of the picture (%s) has an unsupported character. Please rename it "
+"before uploading."
+msgstr ""
+
+#: forms.py:27
+msgid ""
+"The picture is not in one of our supported formats. We don't support BMP "
+"files. Please change it"
+msgstr ""
+
+#: models.py:24
+msgid "Full name"
+msgstr ""
+
+#: models.py:25
+msgid "Biography/description"
+msgstr ""
+
+#: views.py:35
+msgid "New user data saved."
+msgstr ""
+
+#: templates/cssocialprofile/header_useroptions.html:5
+msgid "User's picture"
+msgstr ""
+
+#: templates/cssocialprofile/header_useroptions.html:8
+msgid "Profile"
+msgstr ""
+
+#: templates/cssocialprofile/header_useroptions.html:9
+msgid "Logout"
+msgstr ""
+
+#: templates/cssocialprofile/header_useroptions.html:12
+msgid "Login"
+msgstr ""
+
+#: templates/profile/base.html:8
+msgid "Account"
+msgstr ""
+
+#: templates/profile/base.html:10
+msgid "Basic account"
+msgstr ""
+
+#: templates/profile/base.html:11 templates/profile/edit_photo.html:5
+msgid "Photo"
+msgstr ""
+
+#: templates/profile/base.html:12 templates/profile/edit_social.html:5
+msgid "Social networks"
+msgstr ""
+
+#: templates/profile/edit_personal.html:5
+msgid "Your personal data"
+msgstr ""
+
+#: templates/profile/edit_personal.html:10
+msgid "Save"
+msgstr ""
+
+#: templates/profile/edit_photo.html:7
+msgid "User's photo"
+msgstr ""
+
+#: templates/profile/edit_photo.html:9
+msgid "You don't have a photo yet"
+msgstr ""
+
+#: templates/profile/edit_photo.html:11
+msgid "New photo"
+msgstr ""
+
+#: templates/profile/edit_photo.html:15
+msgid "Change photo"
+msgstr ""
+
+#: templates/profile/edit_social.html:10
+msgid "Twitter linked"
+msgstr ""
+
+#: templates/profile/edit_social.html:12
+msgid "Link Twitter for this user"
+msgstr ""
+
+#: templates/profile/edit_social.html:18
+msgid "Facebook linked"
+msgstr ""
+
+#: templates/profile/edit_social.html:20
+msgid "Link Facebook for this user"
+msgstr ""
+
+#: templates/registration/activate.html:6
+msgid "Your account has been activated"
+msgstr ""
+
+#: templates/registration/activate.html:8
+msgid ""
+"Your account has been properly created. You can use the username and "
+"password that you entered"
+msgstr ""
+
+#: templates/registration/activate.html:9
+msgid "to login in the site"
+msgstr ""
+
+#: templates/registration/activate.html:13
+msgid "Your account could not be activated"
+msgstr ""
+
+#: templates/registration/activate.html:15
+msgid ""
+"We had a problem while activating your account. The link was probably "
+"outdated. Please, try again"
+msgstr ""
+
+#: templates/registration/activation_complete.html:6
+msgid "Your account has been successfully activated"
+msgstr ""
+
+#: templates/registration/activation_complete.html:8
+msgid ""
+"Your account is activated. Now you can login with the username and password "
+"you provided"
+msgstr ""
+
+#: templates/registration/activation_complete.html:10
+#: templates/registration/login.html:26
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/activation_email.txt:4
+msgid "Hello"
+msgstr ""
+
+#: templates/registration/activation_email.txt:6
+#, python-format
+msgid "You have requested joining %(sitename)s."
+msgstr ""
+
+#: templates/registration/activation_email.txt:8
+#, python-format
+msgid "Please click in this activation link before %(expirationdays)s days:"
+msgstr ""
+
+#: templates/registration/activation_email.txt:12
+#: templates/registration/password_reset_email.txt:12
+#, fuzzy, python-format
+msgid "The team at %(site_name)s."
+msgstr ""
+
+#: templates/registration/activation_email_subject.txt:1
+msgid "Account activation on"
+msgstr ""
+
+#: templates/registration/login.html:6 templates/registration/login.html:43
+msgid "Sign in"
+msgstr ""
+
+#: templates/registration/login.html:9 templates/registration/login.html:51
+msgid "I'm new here. Create account"
+msgstr ""
+
+#: templates/registration/login.html:10
+#: templates/registration/registration_form.html:42
+msgid "Create account"
+msgstr ""
+
+#: templates/registration/login.html:13
+msgid "Sign in using Facebook or Twitter"
+msgstr ""
+
+#: templates/registration/login.html:18
+msgid "You can use your Facebook or Twitter accounts to log in"
+msgstr ""
+
+#: templates/registration/login.html:29
+#: templates/registration/registration_form.html:7
+msgid "You are already logged in"
+msgstr ""
+
+#: templates/registration/login.html:35
+msgid "Your username and password do not match. Please try again."
+msgstr ""
+
+#: templates/registration/login.html:38
+#: templates/registration/registration_form.html:21
+msgid "Username"
+msgstr ""
+
+#: templates/registration/login.html:40
+#: templates/registration/registration_form.html:32
+msgid "Password"
+msgstr ""
+
+#: templates/registration/login.html:50
+msgid "I have forgotten my password"
+msgstr ""
+
+#: templates/registration/password_reset.html:5
+#: templates/registration/password_reset_done.html:4
+msgid "Reset password"
+msgstr ""
+
+#: templates/registration/password_reset.html:7
+msgid "Enter your email to reset your password"
+msgstr ""
+
+#: templates/registration/password_reset.html:14
+#: templates/registration/password_reset_confirm.html:12
+#: templates/registration/password_reset_form.html:14
+msgid "Submit"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:4
+msgid "You have reset your password"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:7
+msgid "New password"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:8
+msgid "Please enter twice the new password"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:17
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:7
+msgid ""
+"We have sent to your email the needed information to reset your password"
+msgstr ""
+
+#: templates/registration/password_reset_email.txt:4
+#, python-format
+msgid ""
+"You are receiving this email because you requested resetting the password at "
+"%(site_name)s."
+msgstr ""
+
+#: templates/registration/password_reset_email.txt:6
+msgid "All you have to do is click in this link and set your new password:"
+msgstr ""
+
+#: templates/registration/password_reset_email.txt:10
+#, python-format
+msgid "Remember that you used the username: %(username)s."
+msgstr ""
+
+#: templates/registration/password_reset_form.html:5
+msgid "Reset your password"
+msgstr ""
+
+#: templates/registration/password_reset_form.html:7
+msgid "Please write your email to reset your password"
+msgstr ""
+
+#: templates/registration/registration_complete.html:4
+msgid "Activate your account"
+msgstr ""
+
+#: templates/registration/registration_complete.html:7
+msgid ""
+"In order to confirm your email, we have sent you by email the needed "
+"information to activate your account. Please, read your email and activate "
+"your account."
+msgstr ""
+
+#: templates/registration/registration_complete.html:9
+msgid "Check your email."
+msgstr ""
+
+#: templates/registration/registration_complete.html:10
+msgid "Remember:"
+msgstr ""
+
+#: templates/registration/registration_complete.html:12
+msgid "Check your spam folder if you don't find our email."
+msgstr ""
+
+#: templates/registration/registration_complete.html:13
+msgid "Contact us if you don't receive the email."
+msgstr ""
+
+#: templates/registration/registration_form.html:5
+msgid "Register"
+msgstr ""
+
+#: templates/registration/registration_form.html:27
+msgid "Email"
+msgstr ""
+
+#: templates/registration/registration_form.html:37
+msgid "Confirm password"
+msgstr ""
+
+#: templates/registration/registration_form.html:50
+msgid "Register using Facebook or Twitter"
+msgstr ""
