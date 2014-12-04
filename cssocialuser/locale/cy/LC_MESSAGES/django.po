@@ -51,19 +51,19 @@ msgstr ""
 msgid "New user data saved."
 msgstr ""
 
-#: templates/cssocialprofile/header_useroptions.html:5
+#: templates/cssocialuser/header_useroptions.html:5
 msgid "User's picture"
 msgstr ""
 
-#: templates/cssocialprofile/header_useroptions.html:8
+#: templates/cssocialuser/header_useroptions.html:8
 msgid "Profile"
 msgstr ""
 
-#: templates/cssocialprofile/header_useroptions.html:9
+#: templates/cssocialuser/header_useroptions.html:9
 msgid "Logout"
 msgstr ""
 
-#: templates/cssocialprofile/header_useroptions.html:12
+#: templates/cssocialuser/header_useroptions.html:12
 msgid "Login"
 msgstr ""
 

@@ -7,9 +7,9 @@
 {% block cscontent %}
 <h1>{% trans "Account" %}</h1>
 <ul class="tabs">
-<li {% if tab == 'personal' %}class="selected">{% trans "Basic account" %}{% else %}><a href="{% url 'cssocialprofile_edit_profile' %}">{% trans "Basic account" %}</a>{% endif %}</li>
-<li {% if tab == 'photo' %}class="selected">{% trans "Photo" %}{% else %}><a href="{% url 'cssocialprofile_edit_profile_photo' %}">{% trans "Photo" %}</a>{% endif %}</li>
-<li {% if tab == 'social' %}class="selected">{% trans "Social networks" %}{% else %}><a href="{% url 'cssocialprofile_edit_profile_social' %}">{% trans "Social networks" %}</a>{% endif %}</li>
+<li {% if tab == 'personal' %}class="selected">{% trans "Basic account" %}{% else %}><a href="{% url 'cssocialuser_edit_profile' %}">{% trans "Basic account" %}</a>{% endif %}</li>
+<li {% if tab == 'photo' %}class="selected">{% trans "Photo" %}{% else %}><a href="{% url 'cssocialuser_edit_profile_photo' %}">{% trans "Photo" %}</a>{% endif %}</li>
+<li {% if tab == 'social' %}class="selected">{% trans "Social networks" %}{% else %}><a href="{% url 'cssocialuser_edit_profile_social' %}">{% trans "Social networks" %}</a>{% endif %}</li>
 {% comment %}
 <li {% if tab == 'type' %}class="selected">Mota{% else %}><a href="{% url 'erabiltzailea_perfila_edit_type' %}">Mota</a>{% endif %}</li>
 {% endcomment %}
