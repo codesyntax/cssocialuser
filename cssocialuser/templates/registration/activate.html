@@ -6,7 +6,7 @@
 <h1>{% trans "Your account has been activated" %}</h1>
 <p>
 {% trans "Your account has been properly created. You can use the username and password that you entered" %} 
-<a href="{% url cssocialprofile_user_login %}">{% trans "to login in the site" %}</a>
+<a href="{% url 'cssocialprofile_user_login' %}">{% trans "to login in the site" %}</a>
 </p>
 
 {% else %}

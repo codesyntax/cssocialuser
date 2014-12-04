@@ -49,8 +49,8 @@
 {% else %}
 <h2>{% trans "Register using Facebook or Twitter" %}</h2>
 <p>
-<a rel="nofollow" href="{% url socialauth_begin "twitter" %}{% if next %}?next={{next}}{% endif %}"><img src="http://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-d.png" alt="Twitter logo" /></a> 
-<a rel="nofollow" href="{% url socialauth_begin "facebook" %}{% if next %}?next={{next}}{% endif %}"><img src="http://sanleandro.patch.com/images/facebook-login-button.png" alt="Facebook logo" /></a>
+<a rel="nofollow" href="{% url 'socialauth_begin' "twitter" %}{% if next %}?next={{next}}{% endif %}"><img src="http://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-d.png" alt="Twitter logo" /></a> 
+<a rel="nofollow" href="{% url 'socialauth_begin' "facebook" %}{% if next %}?next={{next}}{% endif %}"><img src="http://sanleandro.patch.com/images/facebook-login-button.png" alt="Facebook logo" /></a>
 </p>
 {% endif %}
 {% endblock %}
