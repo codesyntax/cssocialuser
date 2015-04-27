@@ -1,5 +1,4 @@
 from django import forms
-from django.contrib.auth.models import User
 from cssocialuser.models import CSSocialUser
 from django.utils.translation import ugettext as _
 
