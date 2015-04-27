@@ -20,7 +20,7 @@ Django 1.5ak earri dituen aldaketak inplementatzeko""",
       install_requires=[
           # -*- Extra requirements: -*-
           'django-social-auth',
-          'django-registration',
+          'django_registration_redux',
           'tweepy',
           'facebook-sdk',
       ],
