@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
@@ -18,9 +19,9 @@ def index(request):
     """ """
     h = {}
     return render_to_response('cssocialuser/base.html', h, context_instance=RequestContext(request))
-    
-        
-        
+
+
+
 @login_required
 def edit_profile(request):
     """ """
@@ -28,11 +29,11 @@ def edit_profile(request):
     user= request.user
     profile = user
     if request.method == 'POST':
-         posta=request.POST.copy()     
+         posta=request.POST.copy()
          profileform = ProfileForm(posta, instance=profile)
          if profileform.is_valid():
             profileform.save()
-            messages.add_message(request, messages.SUCCESS, _('New user data saved.'), fail_silently=True)    
+            messages.add_message(request, messages.SUCCESS, _('New user data saved.'), fail_silently=True)
             return HttpResponseRedirect(reverse('cssocialuser_edit_profile'))
     else:
         profileform = ProfileForm(instance=profile)
@@ -43,7 +44,7 @@ def edit_profile(request):
 def handle_uploaded_file(f,title):
     """ """
     photo = Photo()
-    photo.title = u'%s %s' % (title, time_slug_string()) 
+    photo.title = u'%s %s' % (title, time_slug_string())
     photo.title_slug = time_slug_string()
     photo.image = f
     photo.save()
@@ -54,7 +55,7 @@ def handle_uploaded_file(f,title):
 def edit_profile_photo(request):
     """ """
     tab = 'photo'
-    user = request.user    
+    user = request.user
     profile = user
     if request.method == 'POST':
         form = ProfilePhotoForm(request.POST, request.FILES)
@@ -62,18 +63,18 @@ def edit_profile_photo(request):
             photo = handle_uploaded_file(request.FILES['avatarpic'], profile.get_fullname())
             profile.photo = photo
             profile.save()
-                    
+
     else:
-        form = ProfilePhotoForm()       
+        form = ProfilePhotoForm()
     return render_to_response('profile/edit_photo.html', locals(), context_instance=RequestContext(request))
-        
+
 
 @login_required
 def edit_profile_social(request):
     """ """
     tab = 'social'
-    user = request.user    
+    user = request.user
     profile = user
     return render_to_response('profile/edit_social.html', locals(), context_instance=RequestContext(request))
-        
+
 

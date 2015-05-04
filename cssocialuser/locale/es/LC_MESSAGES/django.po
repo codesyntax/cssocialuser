@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: cssocialuser\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-21 16:51+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2015-05-04 16:43+0100\n"
+"Last-Translator: Urtzi Odriozola <urtzi.odriozola@gmail.com>\n"
+"Language-Team: es <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Poedit-Language: es\n"
 
 #: forms.py:14
 msgid "Your picture"
@@ -28,20 +28,12 @@ msgstr "Por favor, carga una foto tuya. Formatos soportados: jpg, png, gif."
 
 #: forms.py:23
 #, python-format
-msgid ""
-"The name of the picture (%s) has an unsupported character. Please rename it "
-"before uploading."
-msgstr ""
-"El nombre del fichero (%s) tiene un caracter no soportado. Por favor "
-"renómbraloantes de cargarlo"
+msgid "The name of the picture (%s) has an unsupported character. Please rename it before uploading."
+msgstr "El nombre del fichero (%s) tiene un caracter no soportado. Por favor renómbraloantes de cargarlo"
 
 #: forms.py:27
-msgid ""
-"The picture is not in one of our supported formats. We don't support BMP "
-"files. Please change it"
-msgstr ""
-"La imagen no está en uno de nuestros formatos soportados. No podemos "
-"utilizar ficheros BMP. Por favor modifícalo antes de cargarlo"
+msgid "The picture is not in one of our supported formats. We don't support BMP files. Please change it"
+msgstr "La imagen no está en uno de nuestros formatos soportados. No podemos utilizar ficheros BMP. Por favor modifícalo antes de cargarlo"
 
 #: models.py:24
 msgid "Full name"
@@ -79,11 +71,13 @@ msgstr "Cuenta"
 msgid "Basic account"
 msgstr "Datos básicos"
 
-#: templates/profile/base.html:11 templates/profile/edit_photo.html:5
+#: templates/profile/base.html:11
+#: templates/profile/edit_photo.html:5
 msgid "Photo"
 msgstr "Foto"
 
-#: templates/profile/base.html:12 templates/profile/edit_social.html:5
+#: templates/profile/base.html:12
+#: templates/profile/edit_social.html:5
 msgid "Social networks"
 msgstr "Redes sociales"
 
@@ -132,12 +126,8 @@ msgid "Your account has been activated"
 msgstr "Tu cuenta ha sido activada"
 
 #: templates/registration/activate.html:8
-msgid ""
-"Your account has been properly created. You can use the username and "
-"password that you entered"
-msgstr ""
-"Tu cuenta ya ha sido creada. Ahora puedes utilizar el usuario y lacontraseña "
-"que nos has dado"
+msgid "Your account has been properly created. You can use the username and password that you entered"
+msgstr "Tu cuenta ya ha sido creada. Ahora puedes utilizar el usuario y lacontraseña que nos has dado"
 
 #: templates/registration/activate.html:9
 msgid "to login in the site"
@@ -148,24 +138,16 @@ msgid "Your account could not be activated"
 msgstr "Tu cuenta no ha podido ser activada"
 
 #: templates/registration/activate.html:15
-msgid ""
-"We had a problem while activating your account. The link was probably "
-"outdated. Please, try again"
-msgstr ""
-"Hemos tenido un problema con la activación de tu cuenta. Puede que "
-"estécaducada. Inténtalo otra vez, por favor."
+msgid "We had a problem while activating your account. The link was probably outdated. Please, try again"
+msgstr "Hemos tenido un problema con la activación de tu cuenta. Puede que estécaducada. Inténtalo otra vez, por favor."
 
 #: templates/registration/activation_complete.html:6
 msgid "Your account has been successfully activated"
 msgstr "Tu cuenta ha sido activada"
 
 #: templates/registration/activation_complete.html:8
-msgid ""
-"Your account is activated. Now you can login with the username and password "
-"you provided"
-msgstr ""
-"Tu cuenta ya ha sido creada. Ahora puedes utilizar el usuario y lacontraseña "
-"que nos has dado"
+msgid "Your account is activated. Now you can login with the username and password you provided"
+msgstr "Tu cuenta ya ha sido creada. Ahora puedes utilizar el usuario y lacontraseña que nos has dado"
 
 #: templates/registration/activation_complete.html:10
 #: templates/registration/login.html:26
@@ -184,9 +166,7 @@ msgstr "Has solicitado el registro en %(sitename)s."
 #: templates/registration/activation_email.txt:8
 #, python-format
 msgid "Please click in this activation link before %(expirationdays)s days:"
-msgstr ""
-"Por favor, haz click en este enlace de activación antes de "
-"%(expirationdays)s días:"
+msgstr "Por favor, haz click en este enlace de activación antes de %(expirationdays)s días:"
 
 #: templates/registration/activation_email.txt:12
 #: templates/registration/password_reset_email.txt:12
@@ -198,11 +178,13 @@ msgstr "El equipo de %(site_name)s."
 msgid "Account activation on"
 msgstr "Activación de la cuenta de"
 
-#: templates/registration/login.html:6 templates/registration/login.html:43
+#: templates/registration/login.html:6
+#: templates/registration/login.html:43
 msgid "Sign in"
 msgstr "Entrar"
 
-#: templates/registration/login.html:9 templates/registration/login.html:51
+#: templates/registration/login.html:9
+#: templates/registration/login.html:51
 msgid "I'm new here. Create account"
 msgstr "Soy nuevo aquí. Crear cuenta"
 
@@ -274,25 +256,17 @@ msgid "Password reset failed"
 msgstr "Falló la recuperación de la contraseña"
 
 #: templates/registration/password_reset_done.html:7
-msgid ""
-"We have sent to your email the needed information to reset your password"
-msgstr ""
-"Te hemos enviado un email con la información necesaria para cambiar la "
-"contraseña"
+msgid "We have sent to your email the needed information to reset your password"
+msgstr "Te hemos enviado un email con la información necesaria para cambiar la contraseña"
 
 #: templates/registration/password_reset_email.txt:4
 #, python-format
-msgid ""
-"You are receiving this email because you requested resetting the password at "
-"%(site_name)s."
-msgstr ""
-"Recibes este mensaje porque has solicitado cambiar la contraseña en "
-"%(site_name)s."
+msgid "You are receiving this email because you requested resetting the password at %(site_name)s."
+msgstr "Recibes este mensaje porque has solicitado cambiar la contraseña en %(site_name)s."
 
 #: templates/registration/password_reset_email.txt:6
 msgid "All you have to do is click in this link and set your new password:"
-msgstr ""
-"Sólo tienes que hacer click en este enlace y definir tu nueva contraseña:"
+msgstr "Sólo tienes que hacer click en este enlace y definir tu nueva contraseña:"
 
 #: templates/registration/password_reset_email.txt:10
 #, python-format
@@ -312,14 +286,8 @@ msgid "Activate your account"
 msgstr "Activa tu cuenta"
 
 #: templates/registration/registration_complete.html:7
-msgid ""
-"In order to confirm your email, we have sent you by email the needed "
-"information to activate your account. Please, read your email and activate "
-"your account."
-msgstr ""
-"Con objeto de confirmar tu email, te hemos enviado un mensaje con toda la "
-"información necesaria para activar tu cuenta. Por favor, revisa tu email y "
-"activa la cuenta"
+msgid "In order to confirm your email, we have sent you by email the needed information to activate your account. Please, read your email and activate your account."
+msgstr "Con objeto de confirmar tu email, te hemos enviado un mensaje con toda la información necesaria para activar tu cuenta. Por favor, revisa tu email y activa la cuenta"
 
 #: templates/registration/registration_complete.html:9
 msgid "Check your email."
