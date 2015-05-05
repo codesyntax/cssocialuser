@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-21 16:51+0200\n"
+"POT-Creation-Date: 2015-05-05 12:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,52 +18,56 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: forms.py:14
+#: forms.py:13
 msgid "Your picture"
 msgstr ""
 
-#: forms.py:14
+#: forms.py:13
 msgid "Please upload a picture of you. Supported formats: jpg, png, gif."
 msgstr ""
 
-#: forms.py:23
+#: forms.py:22
 #, python-format
 msgid ""
 "The name of the picture (%s) has an unsupported character. Please rename it "
 "before uploading."
 msgstr ""
 
-#: forms.py:27
+#: forms.py:26
 msgid ""
 "The picture is not in one of our supported formats. We don't support BMP "
 "files. Please change it"
 msgstr ""
 
-#: models.py:24
+#: models.py:69
+msgid "Phone Number"
+msgstr ""
+
+#: models.py:75
 msgid "Full name"
 msgstr ""
 
-#: models.py:25
+#: models.py:76
 msgid "Biography/description"
 msgstr ""
 
-#: views.py:35
+#: views.py:36
 msgid "New user data saved."
 msgstr ""
 
-#: templates/cssocialuser/header_useroptions.html:5
+#: templates/cssocialprofile/header_useroptions.html:5
 msgid "User's picture"
 msgstr ""
 
-#: templates/cssocialuser/header_useroptions.html:8
+#: templates/cssocialprofile/header_useroptions.html:8
 msgid "Profile"
 msgstr ""
 
-#: templates/cssocialuser/header_useroptions.html:9
+#: templates/cssocialprofile/header_useroptions.html:9
 msgid "Logout"
 msgstr ""
 
-#: templates/cssocialuser/header_useroptions.html:12
+#: templates/cssocialprofile/header_useroptions.html:12
 msgid "Login"
 msgstr ""
 
@@ -162,6 +166,40 @@ msgstr ""
 msgid "Log in"
 msgstr ""
 
+#: templates/registration/activation_email.html:7
+msgid "registration"
+msgstr ""
+
+#: templates/registration/activation_email.html:12
+#, python-format
+msgid ""
+"\n"
+"    You (or someone pretending to be you) have asked to register an account "
+"at\n"
+"    %(site_name)s.  If this wasn't you, please ignore this email\n"
+"    and your address will be removed from our records.\n"
+"    "
+msgstr ""
+
+#: templates/registration/activation_email.html:19
+#, python-format
+msgid ""
+"\n"
+"    To activate this account, please click the following link within the "
+"next\n"
+"    %(expiration_days)s days:\n"
+"    "
+msgstr ""
+
+#: templates/registration/activation_email.html:31
+#, python-format
+msgid ""
+"\n"
+"    Sincerely,\n"
+"    %(site_name)s Management\n"
+"    "
+msgstr ""
+
 #: templates/registration/activation_email.txt:4
 msgid "Hello"
 msgstr ""
@@ -177,9 +215,8 @@ msgid "Please click in this activation link before %(expirationdays)s days:"
 msgstr ""
 
 #: templates/registration/activation_email.txt:12
-#: templates/registration/password_reset_email.txt:12
-#, fuzzy, python-format
-msgid "The team at %(site_name)s."
+#, python-format
+msgid "The team at %(sitename)s."
 msgstr ""
 
 #: templates/registration/activation_email_subject.txt:1
@@ -280,6 +317,11 @@ msgstr ""
 #: templates/registration/password_reset_email.txt:10
 #, python-format
 msgid "Remember that you used the username: %(username)s."
+msgstr ""
+
+#: templates/registration/password_reset_email.txt:12
+#, python-format
+msgid "The team at %(site_name)s."
 msgstr ""
 
 #: templates/registration/password_reset_form.html:5
