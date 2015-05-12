@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cssocialuser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-05 12:51+0200\n"
+"POT-Creation-Date: 2015-05-12 13:10+0200\n"
 "PO-Revision-Date: 2015-05-04 16:44+0100\n"
 "Last-Translator: Urtzi Odriozola <urtzi.odriozola@gmail.com>\n"
 "Language-Team: eu <LL@li.org>\n"
@@ -55,9 +55,17 @@ msgstr "Izen osoa"
 msgid "Biography/description"
 msgstr "Biografia/deskribapena"
 
-#: views.py:36
+#: views.py:39
 msgid "New user data saved."
 msgstr "Erabiltzailearen datuak gordeta"
+
+#: views.py:117
+msgid "Password change"
+msgstr "Pasahitza aldatu"
+
+#: views.py:130
+msgid "Password change successful"
+msgstr ""
 
 #: templates/cssocialprofile/header_useroptions.html:5
 msgid "User's picture"
@@ -90,6 +98,37 @@ msgstr "Argazkiak"
 #: templates/profile/base.html:12 templates/profile/edit_social.html:5
 msgid "Social networks"
 msgstr "Sare sozialak"
+
+#: templates/profile/base.html:13
+msgid "Chage password"
+msgstr "Aldatu pasahitza"
+
+#: templates/profile/edit_pass.html:5
+#: templates/registration/password_reset_form.html:5
+msgid "Reset your password"
+msgstr "Pasahitza berrezarri"
+
+#: templates/profile/edit_pass.html:6
+#: templates/registration/password_reset_form.html:7
+msgid "Please write your email to reset your password"
+msgstr "Sartu zure eposta pasahitza berrezartzeko"
+
+#: templates/profile/edit_pass.html:11
+#: templates/registration/password_reset.html:14
+#: templates/registration/password_reset_confirm.html:12
+#: templates/registration/password_reset_form.html:14
+msgid "Submit"
+msgstr "Bidali"
+
+#: templates/profile/edit_pass_done.html:5
+#: templates/registration/password_reset.html:5
+#: templates/registration/password_reset_done.html:4
+msgid "Reset password"
+msgstr "Pasahitza berrezarri"
+
+#: templates/profile/edit_pass_done.html:6
+msgid "Your password has been reset"
+msgstr "Zure pasaitza ondo berrezarria izan da"
 
 #: templates/profile/edit_personal.html:5
 msgid "Your personal data"
@@ -279,20 +318,9 @@ msgstr "Pasahitza"
 msgid "I have forgotten my password"
 msgstr "Nire pasahitza ahaztu dut"
 
-#: templates/registration/password_reset.html:5
-#: templates/registration/password_reset_done.html:4
-msgid "Reset password"
-msgstr "Pasahitza berrezarri"
-
 #: templates/registration/password_reset.html:7
 msgid "Enter your email to reset your password"
 msgstr "Sartu zure eposta pasahitza berrezarri dezagun"
-
-#: templates/registration/password_reset.html:14
-#: templates/registration/password_reset_confirm.html:12
-#: templates/registration/password_reset_form.html:14
-msgid "Submit"
-msgstr "Bidali"
 
 #: templates/registration/password_reset_complete.html:4
 msgid "You have reset your password"
@@ -340,14 +368,6 @@ msgstr "Gogoratu zure erabiltzailea hau dela: %(username)s."
 #, python-format
 msgid "The team at %(site_name)s."
 msgstr "%(site_name)s-ko lan taldea."
-
-#: templates/registration/password_reset_form.html:5
-msgid "Reset your password"
-msgstr "Pasahitza berrezarri"
-
-#: templates/registration/password_reset_form.html:7
-msgid "Please write your email to reset your password"
-msgstr "Sartu zure eposta pasahitza berrezartzeko"
 
 #: templates/registration/registration_complete.html:4
 msgid "Activate your account"

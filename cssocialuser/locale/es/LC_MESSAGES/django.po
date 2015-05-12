@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: cssocialuser\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-05 12:51+0200\n"
+"POT-Creation-Date: 2015-05-12 13:10+0200\n"
 "PO-Revision-Date: 2015-05-04 16:43+0100\n"
 "Last-Translator: Urtzi Odriozola <urtzi.odriozola@gmail.com>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -55,9 +55,17 @@ msgstr "Nombre completo"
 msgid "Biography/description"
 msgstr "Biografía/descripción"
 
-#: views.py:36
+#: views.py:39
 msgid "New user data saved."
 msgstr "Se ha guardado los datos del usuario"
+
+#: views.py:117
+msgid "Password change"
+msgstr "Cambiar contraseña"
+
+#: views.py:130
+msgid "Password change successful"
+msgstr ""
 
 #: templates/cssocialprofile/header_useroptions.html:5
 msgid "User's picture"
@@ -90,6 +98,37 @@ msgstr "Foto"
 #: templates/profile/base.html:12 templates/profile/edit_social.html:5
 msgid "Social networks"
 msgstr "Redes sociales"
+
+#: templates/profile/base.html:13
+msgid "Chage password"
+msgstr "Cambiar contraseña"
+
+#: templates/profile/edit_pass.html:5
+#: templates/registration/password_reset_form.html:5
+msgid "Reset your password"
+msgstr "Cambiar la contraseña"
+
+#: templates/profile/edit_pass.html:6
+#: templates/registration/password_reset_form.html:7
+msgid "Please write your email to reset your password"
+msgstr "Por favor, escribe tu email para cambiar la contraseña"
+
+#: templates/profile/edit_pass.html:11
+#: templates/registration/password_reset.html:14
+#: templates/registration/password_reset_confirm.html:12
+#: templates/registration/password_reset_form.html:14
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/profile/edit_pass_done.html:5
+#: templates/registration/password_reset.html:5
+#: templates/registration/password_reset_done.html:4
+msgid "Reset password"
+msgstr "Cambiar la contraseña"
+
+#: templates/profile/edit_pass_done.html:6
+msgid "Your password has been reset"
+msgstr "Tu contraseña se ha cambiado correctamente"
 
 #: templates/profile/edit_personal.html:5
 msgid "Your personal data"
@@ -279,20 +318,9 @@ msgstr "Contraseña"
 msgid "I have forgotten my password"
 msgstr "He olvidado mi contraseña"
 
-#: templates/registration/password_reset.html:5
-#: templates/registration/password_reset_done.html:4
-msgid "Reset password"
-msgstr "Cambiar la contraseña"
-
 #: templates/registration/password_reset.html:7
 msgid "Enter your email to reset your password"
 msgstr "Introduce tu email para cambiar la contraseña"
-
-#: templates/registration/password_reset.html:14
-#: templates/registration/password_reset_confirm.html:12
-#: templates/registration/password_reset_form.html:14
-msgid "Submit"
-msgstr "Enviar"
 
 #: templates/registration/password_reset_complete.html:4
 msgid "You have reset your password"
@@ -341,14 +369,6 @@ msgstr "Recuerda que has utilizado el usuario: %(username)s."
 msgid "The team at %(site_name)s."
 msgstr "El equipo de %(site_name)s."
 
-#: templates/registration/password_reset_form.html:5
-msgid "Reset your password"
-msgstr "Cambiar la contraseña"
-
-#: templates/registration/password_reset_form.html:7
-msgid "Please write your email to reset your password"
-msgstr "Por favor, escribe tu email para cambiar la contraseña"
-
 #: templates/registration/registration_complete.html:4
 msgid "Activate your account"
 msgstr "Activa tu cuenta"
@@ -394,274 +414,3 @@ msgstr "Confirma la contraseña"
 #: templates/registration/registration_form.html:50
 msgid "Register using Facebook or Twitter"
 msgstr "Regístrate utilizando Facebook o Twitter"
-
-#~ msgid "Espanol"
-#~ msgstr "Español"
-
-#~ msgid "Euskara"
-#~ msgstr "Euskara"
-
-#~ msgid "%(parentcatname)s: %(childcatname)s in %(cityname)s"
-#~ msgstr "%(parentcatname)s: %(childcatname)s en %(cityname)s"
-
-#~ msgid "cat_%s"
-#~ msgstr "cat_%s"
-
-#~ msgid "%(parentcatname)s in %(cityname)s"
-#~ msgstr "%(parentcatname)s en %(cityname)s"
-
-#~ msgid "aphysic"
-#~ msgstr "Física"
-
-#~ msgid "avisual"
-#~ msgstr "Visual"
-
-#~ msgid "aaudio"
-#~ msgstr "Auditiva"
-
-#~ msgid "aintelec"
-#~ msgstr "Intelectual"
-
-#~ msgid "aorganic"
-#~ msgstr "Orgánica"
-
-#~ msgid "About"
-#~ msgstr "Sobre esto"
-
-#~ msgid "Ararteko maps"
-#~ msgstr "Mapas de Ararteko"
-
-#~ msgid "Home"
-#~ msgstr "Home"
-
-#~ msgid "About the maps"
-#~ msgstr "Sobre los mapas"
-
-#~ msgid "About: Paragraph 1"
-#~ msgstr ""
-#~ "¡Infórmate para llegar a donde quieres! Con tu colaboración conseguiremos "
-#~ "unos espacios más accesibles…"
-
-#~ msgid "About: Paragraph 2"
-#~ msgstr ""
-#~ "Los mapas  colaborativos del Ararteko  nos van a  ayudar a geolocalizar "
-#~ "con vuestras aportaciones.  En este que os presentamos hemos reunido "
-#~ "puntos turísticos, de transporte, bibliotecas… ¡Comenta  sobre su "
-#~ "accesibilidad! La información que contiene es abierta y reutilizable. "
-#~ "Úsala. "
-
-#~ msgid "Discover and share accessible places"
-#~ msgstr "Descubre y comparte lugares accesibles"
-
-#~ msgid "Go to..."
-#~ msgstr "Ir a..."
-
-#~ msgid "Search"
-#~ msgstr "Buscar"
-
-#~ msgid "Accessibility"
-#~ msgstr "Accesibilidad"
-
-#~ msgid "Project supported by"
-#~ msgstr "Proyecto impulsado por"
-
-#~ msgid "tell us what you think"
-#~ msgstr "dinos lo que piensas"
-
-#~ msgid "Comment"
-#~ msgstr "Comenta"
-
-#~ msgid "Add comment"
-#~ msgstr "Añadir comentario"
-
-#~ msgid "Login to comment"
-#~ msgstr "Entra para comentar"
-
-#~ msgid "cat_tourism"
-#~ msgstr "Turismo"
-
-#~ msgid "cat_sleep"
-#~ msgstr "Alojamiento"
-
-#~ msgid "cat_hotel"
-#~ msgstr "Hotel"
-
-#~ msgid "cat_agroturismo"
-#~ msgstr "Agroturismo"
-
-#~ msgid "cat_apartamento"
-#~ msgstr "Apartamentos"
-
-#~ msgid "cat_camping"
-#~ msgstr "Camping"
-
-#~ msgid "cat_casa-particular"
-#~ msgstr "Casa particular"
-
-#~ msgid "cat_casa-rural"
-#~ msgstr "Casa rural"
-
-#~ msgid "cat_hotel-apartamento"
-#~ msgstr "Hotel-apartamento"
-
-#~ msgid "cat_pension"
-#~ msgstr "Pensión"
-
-#~ msgid "cat_eat"
-#~ msgstr "Comer"
-
-#~ msgid "cat_restaurant"
-#~ msgstr "Restaurante"
-
-#~ msgid "cat_sidreria"
-#~ msgstr "Sidrería"
-
-#~ msgid "cat_asador"
-#~ msgstr "Asador"
-
-#~ msgid "cat_transportation"
-#~ msgstr "Transporte"
-
-#~ msgid "cat_bus"
-#~ msgstr "Autobús"
-
-#~ msgid "cat_train"
-#~ msgstr "Tren"
-
-#~ msgid "cat_tram"
-#~ msgstr "Tranvía"
-
-#~ msgid "cat_culture"
-#~ msgstr "Cultura"
-
-#~ msgid "cat_library"
-#~ msgstr "Biblioteca"
-
-#~ msgid "cat_museum"
-#~ msgstr "Museo"
-
-#~ msgid "access_a"
-#~ msgstr "Accesible"
-
-#~ msgid "access_p"
-#~ msgstr "Practicable"
-
-#~ msgid "access_n"
-#~ msgstr "No accesible"
-
-#~ msgid "acceso_bbdd"
-#~ msgstr "Acceso a bases de datos"
-
-#~ msgid "prestamo"
-#~ msgstr "Préstamo"
-
-#~ msgid "hemeroteca"
-#~ msgstr "Hemeroteca"
-
-#~ msgid "consulta"
-#~ msgstr "Consulta"
-
-#~ msgid "wifi"
-#~ msgstr "Wi-fi"
-
-#~ msgid "reprografia"
-#~ msgstr "Reprografía"
-
-#~ msgid "infor_bibliografica"
-#~ msgstr "Información bibliográfica"
-
-#~ msgid "prestamo_domic"
-#~ msgstr "Préstamo domiciliario"
-
-#~ msgid "internet_usuarios"
-#~ msgstr "Internet para usuarios"
-
-#~ msgid "prestamo_inter"
-#~ msgstr "Préstamo interbibliotecario"
-
-#~ msgid "general"
-#~ msgstr "General"
-
-#~ msgid "ayto"
-#~ msgstr "Ayuntamiento"
-
-#~ msgid "auto"
-#~ msgstr "Autónomo"
-
-#~ msgid "priv"
-#~ msgstr "Privado"
-
-#~ msgid "l"
-#~ msgstr "Libre"
-
-#~ msgid "r"
-#~ msgstr "Restringido"
-
-#~ msgid "p"
-#~ msgstr "Público"
-
-#~ msgid "Visit this places"
-#~ msgstr "Visita estos lugares:"
-
-#~ msgid "Last places"
-#~ msgstr "Últimos lugares"
-
-#~ msgid "Visit full %(cityname)s"
-#~ msgstr "Visita %(cityname)s completa"
-
-#~ msgid "Website"
-#~ msgstr "Sitio web"
-
-#~ msgid "detailed file"
-#~ msgstr "Ficha detallada"
-
-#~ msgid "Library"
-#~ msgstr "Biblioteca"
-
-#~ msgid "btype"
-#~ msgstr "Tipo"
-
-#~ msgid "start_year"
-#~ msgstr "Año apertura"
-
-#~ msgid "open_times"
-#~ msgstr "Horario"
-
-#~ msgid "access_type"
-#~ msgstr "Tipo de acceso"
-
-#~ msgid "center_type"
-#~ msgstr "Tipo de centro"
-
-#~ msgid "topics"
-#~ msgstr "Temas"
-
-#~ msgid "services"
-#~ msgstr "Servicios"
-
-#~ msgid "Comments"
-#~ msgstr "Comentarios"
-
-#~ msgid "Map"
-#~ msgstr "Mapa"
-
-#~ msgid "Nearest places"
-#~ msgstr "Lugares cercanos"
-
-#~ msgid "Search results"
-#~ msgstr "Buscar"
-
-#~ msgid "Previous"
-#~ msgstr "Anteriores"
-
-#~ msgid "Next"
-#~ msgstr "Siguientes"
-
-#~ msgid "Sign out"
-#~ msgstr "Salir"
-
-#~ msgid "Tus datos personales"
-#~ msgstr "Perfil"
-
-#~ msgid "Enlazar Facebook para este usuario"
-#~ msgstr "Entrar utilizando Facebook o Twitter"

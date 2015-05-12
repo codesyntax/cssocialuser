@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-05 12:51+0200\n"
+"POT-Creation-Date: 2015-05-12 13:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,8 +51,16 @@ msgstr ""
 msgid "Biography/description"
 msgstr ""
 
-#: views.py:36
+#: views.py:39
 msgid "New user data saved."
+msgstr ""
+
+#: views.py:117
+msgid "Password change"
+msgstr ""
+
+#: views.py:130
+msgid "Password change successful"
 msgstr ""
 
 #: templates/cssocialprofile/header_useroptions.html:5
@@ -85,6 +93,37 @@ msgstr ""
 
 #: templates/profile/base.html:12 templates/profile/edit_social.html:5
 msgid "Social networks"
+msgstr ""
+
+#: templates/profile/base.html:13
+msgid "Chage password"
+msgstr ""
+
+#: templates/profile/edit_pass.html:5
+#: templates/registration/password_reset_form.html:5
+msgid "Reset your password"
+msgstr ""
+
+#: templates/profile/edit_pass.html:6
+#: templates/registration/password_reset_form.html:7
+msgid "Please write your email to reset your password"
+msgstr ""
+
+#: templates/profile/edit_pass.html:11
+#: templates/registration/password_reset.html:14
+#: templates/registration/password_reset_confirm.html:12
+#: templates/registration/password_reset_form.html:14
+msgid "Submit"
+msgstr ""
+
+#: templates/profile/edit_pass_done.html:5
+#: templates/registration/password_reset.html:5
+#: templates/registration/password_reset_done.html:4
+msgid "Reset password"
+msgstr ""
+
+#: templates/profile/edit_pass_done.html:6
+msgid "Your password has been reset"
 msgstr ""
 
 #: templates/profile/edit_personal.html:5
@@ -267,19 +306,8 @@ msgstr ""
 msgid "I have forgotten my password"
 msgstr ""
 
-#: templates/registration/password_reset.html:5
-#: templates/registration/password_reset_done.html:4
-msgid "Reset password"
-msgstr ""
-
 #: templates/registration/password_reset.html:7
 msgid "Enter your email to reset your password"
-msgstr ""
-
-#: templates/registration/password_reset.html:14
-#: templates/registration/password_reset_confirm.html:12
-#: templates/registration/password_reset_form.html:14
-msgid "Submit"
 msgstr ""
 
 #: templates/registration/password_reset_complete.html:4
@@ -322,14 +350,6 @@ msgstr ""
 #: templates/registration/password_reset_email.txt:12
 #, python-format
 msgid "The team at %(site_name)s."
-msgstr ""
-
-#: templates/registration/password_reset_form.html:5
-msgid "Reset your password"
-msgstr ""
-
-#: templates/registration/password_reset_form.html:7
-msgid "Please write your email to reset your password"
 msgstr ""
 
 #: templates/registration/registration_complete.html:4
