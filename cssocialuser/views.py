@@ -108,10 +108,6 @@ def password_change(request,
         form = password_change_form(user=request.user, data=request.POST)
         if form.is_valid():
             form.save()
-            # Updating the password logs out all other sessions for the user
-            # except the current one if
-            # django.contrib.auth.middleware.SessionAuthenticationMiddleware
-            # is enabled.
             update_session_auth_hash(request, form.user)
             return HttpResponseRedirect(post_change_redirect)
     else:
