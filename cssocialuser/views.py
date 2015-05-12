@@ -9,6 +9,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.views.decorators.debug import sensitive_post_parameters
 from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.forms import PasswordChangeForm
+from django.template.response import TemplateResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
@@ -118,6 +119,19 @@ def password_change(request,
     context = {
         'form': form,
         'title': _('Password change'),
+        'tab': 'pass',
+    }
+    if extra_context is not None:
+        context.update(extra_context)
+    return TemplateResponse(request, template_name, context,
+                            current_app=current_app)
+
+@login_required
+def password_change_done(request,
+                         template_name='registration/password_change_done.html',
+                         current_app=None, extra_context=None):
+    context = {
+        'title': _('Password change successful'),
         'tab': 'pass',
     }
     if extra_context is not None:
