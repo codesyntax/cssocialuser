@@ -6,7 +6,9 @@ from django.core.urlresolvers import reverse
 from django.shortcuts import get_list_or_404
 
 from django.contrib.contenttypes.models import ContentType
-
+from django.views.decorators.debug import sensitive_post_parameters
+from django.views.decorators.csrf import csrf_protect
+from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
@@ -77,4 +79,48 @@ def edit_profile_social(request):
     profile = user
     return render_to_response('profile/edit_social.html', locals(), context_instance=RequestContext(request))
 
+def update_session_auth_hash(request, user):
+    """
+    Updating a user's password logs out all sessions for the user if
+    django.contrib.auth.middleware.SessionAuthenticationMiddleware is enabled.
+    This function takes the current request and the updated user object from
+    which the new session hash will be derived and updates the session hash
+    appropriately to prevent a password change from logging out the session
+    from which the password was changed.
+    """
+    if hasattr(user, 'get_session_auth_hash') and request.user == user:
+        request.session[HASH_SESSION_KEY] = user.get_session_auth_hash()
 
+@sensitive_post_parameters()
+@csrf_protect
+@login_required
+def password_change(request,
+                    template_name='registration/password_change_form.html',
+                    post_change_redirect=None,
+                    password_change_form=PasswordChangeForm,
+                    current_app=None, extra_context=None):
+    if post_change_redirect is None:
+        post_change_redirect = reverse('cssocialuser_edit_profile_pass_done')
+    else:
+        post_change_redirect = resolve_url(post_change_redirect)
+    if request.method == "POST":
+        form = password_change_form(user=request.user, data=request.POST)
+        if form.is_valid():
+            form.save()
+            # Updating the password logs out all other sessions for the user
+            # except the current one if
+            # django.contrib.auth.middleware.SessionAuthenticationMiddleware
+            # is enabled.
+            update_session_auth_hash(request, form.user)
+            return HttpResponseRedirect(post_change_redirect)
+    else:
+        form = password_change_form(user=request.user)
+    context = {
+        'form': form,
+        'title': _('Password change'),
+        'tab': 'pass',
+    }
+    if extra_context is not None:
+        context.update(extra_context)
+    return TemplateResponse(request, template_name, context,
+                            current_app=current_app)
