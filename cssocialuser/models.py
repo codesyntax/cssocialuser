@@ -187,7 +187,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         if self.photo:
             return self.photo
         try:
-            return Photo.objects.get(title_slug=DEFAULT_PROFILE_PHOTO)
+            return Photo.objects.get(slug=DEFAULT_PROFILE_PHOTO)
         except:
             return None
 

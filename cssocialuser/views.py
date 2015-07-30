@@ -44,7 +44,7 @@ def handle_uploaded_file(f,title):
     """ """
     photo = Photo()
     photo.title = u'%s %s' % (title, time_slug_string()) 
-    photo.title_slug = time_slug_string()
+    photo.slug = time_slug_string()
     photo.image = f
     photo.save()
     return photo
