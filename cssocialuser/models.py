@@ -19,7 +19,7 @@ DEFAULT_PROFILE_PHOTO = getattr(settings,'DEFAULT_PROFILE_PHOTO', 'anonymous-use
 
 def get_user_data(backend, details, response, social_user, uid, user, *args, **kwargs):
     if backend.__class__ == FacebookBackend:
-        user.set_facebook_extra_values(response, details, **kwargs)      
+        user.set_facebook_extra_values(response, details, **kwargs)
     elif backend.__class__ == TwitterBackend:
         user.set_twitter_extra_values(response, details, **kwargs)
     elif backend.__class__ == OpenIDBackend:
@@ -40,20 +40,20 @@ class MyUserManager(BaseUserManager):
         if email:
             isEmail=self.filter(email=email, email__isnull=False)
         else:
-            isEmail=None    
+            isEmail=None
         if isUser:
             user=isUser[0]
         elif isEmail:
-            user=isEmail[0]    
-        else:    
+            user=isEmail[0]
+        else:
             user = self.model(username=username, email=email,
                               is_active=True, is_superuser=False,
                               last_login=now, **extra_fields)
- 
+
             user.set_password(password)
         user.save(using=self._db)
         return user
- 
+
     def create_superuser(self, username, email, password, **extra_fields):
         u = self.create_user(username, email, password, **extra_fields)
         u.is_staff = True
@@ -70,15 +70,15 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
 
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
-    is_staff = models.BooleanField(default=False)    
+    is_staff = models.BooleanField(default=False)
 
     fullname = models.CharField(_('Full name'), max_length=200, blank=True,null=True)
     bio = models.TextField(_('Biography/description'),null=True,blank=True)
     usertype =  models.PositiveSmallIntegerField(choices = USERTYPE_CHOICES, default = 0)
-    
+
     added_source = models.PositiveSmallIntegerField(choices = SOURCE_CHOICES, default = 0)
     photo = models.ForeignKey(Photo,null=True, blank=True)
-    
+
     twitter_id = models.CharField(max_length=100, blank=True,null=True)
     facebook_id = models.CharField(max_length=100, blank=True,null=True)
     openid_id = models.CharField(max_length=100, blank=True,null=True)
@@ -103,7 +103,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         first_name = user_data.get('first_name')
         last_name = user_data.get('last_name')
         photo_url = user_data.get('picture').get('data').get('url')
-        if photo_url:   
+        if photo_url:
             img_title = u'Facebook: ' + first_name + u' ' + last_name
             return loadUrlImage(photo_url,img_title)
         else:
@@ -116,7 +116,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
 
         if self.usertype == 0:
             self.usertype = 1
-        
+
         if self.added_source == 0:
             #First time logging in
             self.added_source = 3
@@ -140,10 +140,10 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
             self.added_source = 2
 
         if not self.bio:
-            self.bio = response.get('description','')         
+            self.bio = response.get('description','')
 
         if not self.fullname:
-            self.fullname = response.get('name','')    
+            self.fullname = response.get('name','')
 
         self.save()
         return True
@@ -196,7 +196,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         if self.fullname:
             return self.fullname
         else:
-            return u'%s' % (self.get_full_name()) or self.username            
+            return u'%s' % (self.get_full_name()) or self.username
 
     def __unicode__(self):
         return u'%s' % (self.username)
