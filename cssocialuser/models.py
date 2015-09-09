@@ -2,7 +2,7 @@ import facebook
 from photologue.models import Photo
 from social.backends.facebook import FacebookBackend
 from social.backends.twitter import TwitterBackend
-from social_auth.backends import OpenIDBackend
+from social.backends import OpenIDBackend
 from django.db import models
 from django.conf import settings
 from django.template.defaultfilters import slugify
