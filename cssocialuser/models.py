@@ -1,13 +1,5 @@
 import facebook
 from photologue.models import Photo
-
-from social.backends.twitter import TwitterOAuth as TwitterBackend
-from social.backends.facebook import FacebookOAuth2 as FacebookBackend
-from social.backends.open_id import OpenIdAuth as OpenIDBackend
-#from social.backends.facebook import FacebookBackend
-#from social.backends.twitter import TwitterBackend
-#from social.backends import OpenIDBackend
-
 from django.db import models
 from django.conf import settings
 from django.template.defaultfilters import slugify
@@ -22,16 +14,17 @@ SOURCE_CHOICES = ((0,'-'),(1,'Register'),(2,'Twitter'),(3,'Facebook'),(4,'OpenId
 DEFAULT_PROFILE_PHOTO = getattr(settings,'DEFAULT_PROFILE_PHOTO', 'anonymous-user')
 
 
-def get_user_data(backend, details, response, social_user, uid, user, *args, **kwargs):
-    if backend.__class__ == FacebookBackend:
-        user.set_facebook_extra_values(response, details, **kwargs)
-    elif backend.__class__ == TwitterBackend:
-        user.set_twitter_extra_values(response, details, **kwargs)
-    elif backend.__class__ == OpenIDBackend:
-        user.set_set_openid_extra_values(response, details, **kwargs)
-    return {'social_user': social_user,
-            'user': social_user.user,
+def get_user_data(backend, user, response, *args, **kwargs):
+    import pdb;pdb.set_trace()
+    if backend.name == 'facebook':
+        user.set_facebook_extra_values(response=response, **kwargs)
+
+    elif backend.name == 'twitter':
+        user.set_twitter_extra_values(response=response, **kwargs)
+
+    return {'user': user,
             'new_association': True}
+
 
 
 class MyUserManager(BaseUserManager):
@@ -115,7 +108,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
             return None
 
 
-    def set_facebook_extra_values(self, response, details, **kwargs):
+    def set_facebook_extra_values(self, response, **kwargs):
         """ """
         self.facebook_id = response.get('id')
 
@@ -133,10 +126,12 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         return True
 
 
-    def set_twitter_extra_values(self, response, details, **kwargs):
+    def set_twitter_extra_values(self, response, **kwargs):
         """ """
         if not self.photo:
-            self.photo = self.get_twitter_photo(response)
+            photo = self.get_twitter_photo(response)
+            photo.save()
+            self.photo =photo
         self.twitter_id = response.get('screen_name','')
 
         if self.usertype == 0:
@@ -161,7 +156,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         return loadUrlImage(img_url,u'twitter: ' + username)
 
 
-    def set_openid_extra_values(self, response, details, **kwargs):
+    def set_openid_extra_values(self, response, **kwargs):
         """ """
         if response.status == 'success':
             user.openid_id = response.getDisplayIdentifier()
