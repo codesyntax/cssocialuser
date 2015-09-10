@@ -15,7 +15,7 @@ DEFAULT_PROFILE_PHOTO = getattr(settings,'DEFAULT_PROFILE_PHOTO', 'anonymous-use
 
 
 def get_user_data(backend, user, response, *args, **kwargs):
-    import pdb;pdb.set_trace()
+
     if backend.name == 'facebook':
         user.set_facebook_extra_values(response=response, **kwargs)
 
