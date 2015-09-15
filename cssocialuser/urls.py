@@ -20,8 +20,9 @@ urlpatterns += patterns('',
     url(r'^accounts/password/$',TemplateView.as_view(template_name='/')),
     url(r'^accounts/$',TemplateView.as_view(template_name='/')),
 
-    (r'^accounts/', include('registration.backends.default.urls')),
-    (r'^social/', include('social_auth.urls')),
+    (r'^accounts/', include('registration.urls')),
+    url(r'^social/', include('social.apps.django_app.urls', namespace='social')),
+
 )
 
 #default profile edit urls
@@ -29,6 +30,7 @@ urlpatterns += patterns('cssocialuser.views',
     url(r'^edit-profile$','edit_profile', name='cssocialuser_edit_profile'),
     url(r'^edit-profile-photo$','edit_profile_photo', name='cssocialuser_edit_profile_photo'),
     url(r'^edit-profile-social$','edit_profile_social', name='cssocialuser_edit_profile_social'),
+
     url(r'^edit-profile-pass$','password_change', name='cssocialuser_edit_profile_pass'),
     url(r'^edit-profil-pass-done$','password_change_done', name='cssocialuser_edit_profile_pass_done'),
 )

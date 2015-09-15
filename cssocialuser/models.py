@@ -1,8 +1,5 @@
 import facebook
 from photologue.models import Photo
-from social_auth.backends.facebook import FacebookBackend
-from social_auth.backends.twitter import TwitterBackend
-from social_auth.backends import OpenIDBackend
 from django.db import models
 from django.conf import settings
 from django.template.defaultfilters import slugify
@@ -17,16 +14,17 @@ SOURCE_CHOICES = ((0,'-'),(1,'Register'),(2,'Twitter'),(3,'Facebook'),(4,'OpenId
 DEFAULT_PROFILE_PHOTO = getattr(settings,'DEFAULT_PROFILE_PHOTO', 'anonymous-user')
 
 
-def get_user_data(backend, details, response, social_user, uid, user, *args, **kwargs):
-    if backend.__class__ == FacebookBackend:
-        user.set_facebook_extra_values(response, details, **kwargs)      
-    elif backend.__class__ == TwitterBackend:
-        user.set_twitter_extra_values(response, details, **kwargs)
-    elif backend.__class__ == OpenIDBackend:
-        user.set_set_openid_extra_values(response, details, **kwargs)
-    return {'social_user': social_user,
-            'user': social_user.user,
+def get_user_data(backend, user, response, *args, **kwargs):
+
+    if backend.name == 'facebook':
+        user.set_facebook_extra_values(response=response, **kwargs)
+
+    elif backend.name == 'twitter':
+        user.set_twitter_extra_values(response=response, **kwargs)
+
+    return {'user': user,
             'new_association': True}
+
 
 
 class MyUserManager(BaseUserManager):
@@ -40,20 +38,20 @@ class MyUserManager(BaseUserManager):
         if email:
             isEmail=self.filter(email=email, email__isnull=False)
         else:
-            isEmail=None    
+            isEmail=None
         if isUser:
             user=isUser[0]
         elif isEmail:
-            user=isEmail[0]    
-        else:    
+            user=isEmail[0]
+        else:
             user = self.model(username=username, email=email,
                               is_active=True, is_superuser=False,
                               last_login=now, **extra_fields)
- 
+
             user.set_password(password)
         user.save(using=self._db)
         return user
- 
+
     def create_superuser(self, username, email, password, **extra_fields):
         u = self.create_user(username, email, password, **extra_fields)
         u.is_staff = True
@@ -70,15 +68,15 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
 
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
-    is_staff = models.BooleanField(default=False)    
+    is_staff = models.BooleanField(default=False)
 
     fullname = models.CharField(_('Full name'), max_length=200, blank=True,null=True)
     bio = models.TextField(_('Biography/description'),null=True,blank=True)
     usertype =  models.PositiveSmallIntegerField(choices = USERTYPE_CHOICES, default = 0)
-    
+
     added_source = models.PositiveSmallIntegerField(choices = SOURCE_CHOICES, default = 0)
     photo = models.ForeignKey(Photo,null=True, blank=True)
-    
+
     twitter_id = models.CharField(max_length=100, blank=True,null=True)
     facebook_id = models.CharField(max_length=100, blank=True,null=True)
     openid_id = models.CharField(max_length=100, blank=True,null=True)
@@ -103,20 +101,20 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         first_name = user_data.get('first_name')
         last_name = user_data.get('last_name')
         photo_url = user_data.get('picture').get('data').get('url')
-        if photo_url:   
+        if photo_url:
             img_title = u'Facebook: ' + first_name + u' ' + last_name
             return loadUrlImage(photo_url,img_title)
         else:
             return None
 
 
-    def set_facebook_extra_values(self, response, details, **kwargs):
+    def set_facebook_extra_values(self, response, **kwargs):
         """ """
         self.facebook_id = response.get('id')
 
         if self.usertype == 0:
             self.usertype = 1
-        
+
         if self.added_source == 0:
             #First time logging in
             self.added_source = 3
@@ -128,10 +126,12 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         return True
 
 
-    def set_twitter_extra_values(self, response, details, **kwargs):
+    def set_twitter_extra_values(self, response, **kwargs):
         """ """
         if not self.photo:
-            self.photo = self.get_twitter_photo(response)
+            photo = self.get_twitter_photo(response)
+            photo.save()
+            self.photo =photo
         self.twitter_id = response.get('screen_name','')
 
         if self.usertype == 0:
@@ -140,10 +140,10 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
             self.added_source = 2
 
         if not self.bio:
-            self.bio = response.get('description','')         
+            self.bio = response.get('description','')
 
         if not self.fullname:
-            self.fullname = response.get('name','')    
+            self.fullname = response.get('name','')
 
         self.save()
         return True
@@ -156,7 +156,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         return loadUrlImage(img_url,u'twitter: ' + username)
 
 
-    def set_openid_extra_values(self, response, details, **kwargs):
+    def set_openid_extra_values(self, response, **kwargs):
         """ """
         if response.status == 'success':
             user.openid_id = response.getDisplayIdentifier()
@@ -187,7 +187,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         if self.photo:
             return self.photo
         try:
-            return Photo.objects.get(title_slug=DEFAULT_PROFILE_PHOTO)
+            return Photo.objects.get(slug=DEFAULT_PROFILE_PHOTO)
         except:
             return None
 
@@ -196,7 +196,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
         if self.fullname:
             return self.fullname
         else:
-            return u'%s' % (self.get_full_name()) or self.username            
+            return u'%s' % (self.get_full_name()) or self.username
 
     def __unicode__(self):
         return u'%s' % (self.username)
