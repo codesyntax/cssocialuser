@@ -1,8 +1,9 @@
 HISTORY
 =======
 
-0.42 (unreleased)
-----------------
+0.42 (2015-09-15)
+-----------------
 
-- No changes yet
+- files [Jatsu Argarate <jargarate@codesyntax.com>]
+
 
