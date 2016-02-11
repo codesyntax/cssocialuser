@@ -203,6 +203,7 @@ class CSAbstractSocialUser(AbstractBaseUser, PermissionsMixin):
 
     class Meta:
         abstract = True
+        app_label = 'CSSocialUser'
 
 class CSSocialUser(CSAbstractSocialUser):
     pass
