@@ -1,7 +1,7 @@
 HISTORY
 =======
 
-0.43 (unreleased)
+0.43 (2016-02-17)
 -----------------
 
 - Added app_label meta data for Django 1.9 [csmant <csmant@anboto>]
