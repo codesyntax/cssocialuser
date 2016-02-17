@@ -4,7 +4,8 @@ HISTORY
 0.43 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Added app_label meta data for Django 1.9 [csmant <csmant@anboto>]
+
 
 
 0.42 (2015-09-15)
