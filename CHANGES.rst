@@ -4,7 +4,8 @@ HISTORY
 0.44 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- Django 1.10 changes [Urtzi Odriozola <uodriozola@codesyntax.com>]
+
 
 
 0.43 (2016-02-17)
