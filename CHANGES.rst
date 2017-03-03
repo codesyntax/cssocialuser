@@ -1,7 +1,7 @@
 HISTORY
 =======
 
-0.44 (unreleased)
+0.44 (2017-03-03)
 -----------------
 
 - Django 1.10 changes [Urtzi Odriozola <uodriozola@codesyntax.com>]
