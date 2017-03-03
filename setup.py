@@ -18,7 +18,7 @@ Social users compatible with Django>=1.5""",
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       include_package_data=True,
       zip_safe=False,
-      requires=['django(>=1.5)'],
+      requires=['django(>=1.10)'],
       install_requires=[
           # -*- Extra requirements: -*-
           'python-social-auth',
