@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^accounts/password/$',TemplateView.as_view(template_name='/')),
     url(r'^accounts/$',TemplateView.as_view(template_name='/')),
     url(r'^accounts/', include('registration.backends.default.urls')),
+    # url(r'^social/', include('social_django.urls', namespace='social')),
     url(r'^social/', include('social_django.urls', namespace='social')),
     url(r'^edit-profile$', views.edit_profile, name='cssocialuser_edit_profile'),
     url(r'^edit-profile-photo$', views.edit_profile_photo, name='cssocialuser_edit_profile_photo'),

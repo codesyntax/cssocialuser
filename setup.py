@@ -21,7 +21,8 @@ Social users compatible with Django>=1.5""",
       requires=['django(>=1.10)'],
       install_requires=[
           # -*- Extra requirements: -*-
-          'python-social-auth',
+          #'python-social-auth',
+          'social-auth-app-django',
           'django-registration-redux',
           'tweepy',
           'facebook-sdk',
