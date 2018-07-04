@@ -1,14 +1,15 @@
 {% extends "profile/base.html" %}
-{% load i18n %}
+{% load i18n bootstrap %}
+
 {% block perfil %}
 <div class="profileform">
-<h1>{% trans "Reset your password" %}</h1>
-<p>{% trans "Please write your email to reset your password" %}</p>
+    <h1>{% trans "Reset your password" %}</h1>
+    <p>{% trans "Please write your email to reset your password" %}</p>
 
-<form method="post" action="{{request.path}}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="{% trans 'Submit' %}" class="submit" />
-</form>
+    <form method="post" action="{{request.path}}">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <input type="submit" class="btn btn-default" value="{% trans 'Submit' %}" class="submit" />
+    </form>
 </div>
 {% endblock %}

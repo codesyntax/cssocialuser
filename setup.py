@@ -26,6 +26,7 @@ Social users compatible with Django>=1.5""",
           'django-registration-redux',
           'tweepy',
           'facebook-sdk',
+          'django-bootstrap-form',
       ],
       entry_points="""
       # -*- Entry points: -*-
