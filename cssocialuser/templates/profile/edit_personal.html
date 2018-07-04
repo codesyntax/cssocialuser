@@ -6,9 +6,9 @@
     <h2>{% trans "Your personal data" %}</h2>
     <form action="{{request.path}}" method="POST">
         {% csrf_token %}
-        {{userform|bootstrap}}
+        {{userform.as_p}}
         {{profileform|bootstrap}}
-        <input type="submit" class="botoia" value="{% trans "Save" %}">
+        <input type="submit" class="btn btn-primary" value="{% trans "Save" %}">
     </form>
 </div>
 {% endblock %}
