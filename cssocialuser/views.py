@@ -97,7 +97,7 @@ def password_change(request,
                     template_name='profile/edit_pass.html',
                     post_change_redirect=None,
                     password_change_form=PasswordChangeForm,
-                    current_app=None, extra_context=None):
+                    extra_context=None):
     if post_change_redirect is None:
         post_change_redirect = reverse('cssocialuser_edit_profile_pass_done')
     else:
@@ -123,7 +123,7 @@ def password_change(request,
 @login_required
 def password_change_done(request,
                          template_name='profile/edit_pass_done.html',
-                         current_app=None, extra_context=None):
+                         extra_context=None):
     context = {
         'title': _('Password change successful'),
         'tab': 'pass',
