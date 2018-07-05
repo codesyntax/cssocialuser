@@ -1,7 +1,7 @@
 HISTORY
 =======
 
-0.46 (unreleased)
+0.46 (2018-07-05)
 -----------------
 
 - python socia auth jarri [Jatsu Argarate <jargarate@codesyntax.com>]
