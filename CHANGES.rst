@@ -1,7 +1,7 @@
 HISTORY
 =======
 
-0.45 (unreleased)
+0.45 (2018-07-05)
 -----------------
 
 - Merge branch 'master' of github.com:codesyntax/cssocialuser [Jatsu Argarate <jargarate@codesyntax.com>]
