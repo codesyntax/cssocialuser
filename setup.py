@@ -4,6 +4,7 @@ import sys, os
 
 version = '0.45.dev0'
 
+
 setup(name='cssocialuser',
       version=version,
       description="CsSocialUser",
@@ -21,7 +22,6 @@ Social users compatible with Django>=1.5""",
       requires=['django(>=1.10)'],
       install_requires=[
           # -*- Extra requirements: -*-
-          'python-social-auth',
           'social-auth-app-django',
           'django-registration-redux',
           'tweepy',
