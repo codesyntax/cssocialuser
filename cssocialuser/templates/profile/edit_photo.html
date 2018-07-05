@@ -1,19 +1,20 @@
 {% extends "profile/base.html" %}
-{% load i18n %}
+{% load i18n bootstrap %}
+
 {% block perfil %}
 <div class="profileform">
-<h2>{% trans "Photo" %}</h2>
-{% if profile.photo %}
-<img class="userlogged" src="{{profile.photo.get_profile_medium_url}}" alt="{% trans "User's photo" %}" />
-{% else %}
-<p class="message">{% trans "You don't have a photo yet" %}</p>
-{% endif %}
-<h2>{% trans "New photo" %}</h2>
-<form method="post" action="" enctype="multipart/form-data">
-{% csrf_token %}
-{{ form.as_p }}
-<input type="submit" value="{% trans "Change photo" %}" class="botoia" />
-</form>
+    <h2>{% trans "Photo" %}</h2>
+    {% if profile.photo %}
+        <img class="userlogged" src="{{profile.photo.get_profile_medium_url}}" alt="{% trans "User's photo" %}" />
+    {% else %}
+        <p class="message">{% trans "You don't have a photo yet" %}</p>
+    {% endif %}
+    <h2>{% trans "New photo" %}</h2>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <input class="btn btn-primary" type="submit" value="{% trans "Change photo" %}" class="botoia" />
+    </form>
 </div>
 
 {% endblock %}

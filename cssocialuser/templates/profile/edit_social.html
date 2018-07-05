@@ -1,26 +1,30 @@
 {% extends "profile/base.html" %}
-{% load i18n %}
+{% load i18n static %}
+
 {% block perfil %}
 <div class="profileform">
-<h2>{% trans "Social networks" %}</h2>
-
-<h3>Twitter</h3>
-<p>
-{% if profile.twitter_id %}
-{% trans "Twitter linked" %}: <a href="http://twitter.com/{{profile.twitter_id}}">{{profile.twitter_id}}</a>
-{% else %}
-{% trans "Link Twitter for this user" %} <br /><a rel="nofollow" href="{% url 'socialauth_associate_begin' "twitter" %}?next={{request.path}}"><img src="http://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-d.png" alt="Twitter icon" /></a>
-{% endif %}
-</p>
-<h3>Facebook</h3>
-<p>
-{% if profile.facebook_id %}
-{% trans "Facebook linked" %}: <a href="http://facebook.com/profile.php?id={{profile.facebook_id}}">{{profile.facebook_id}}</a>
-{% else %}
-{% trans "Link Facebook for this user" %} <br /><a rel="nofollow" href="{% url 'socialauth_associate_begin' "facebook" %}?next={{request.path}}"><img src="http://sanleandro.patch.com/images/facebook-login-button.png" alt="Facebook icon" /></a>
-{% endif %}
-</p>
-
+    <h2>{% trans "Social networks" %}</h2>
+    <h3>Twitter</h3>
+    <p>
+    {% if profile.twitter_id %}
+        {% trans "Twitter linked" %}: <a href="http://twitter.com/{{profile.twitter_id}}">{{profile.twitter_id}}</a>
+    {% else %}
+        {% trans "Link Twitter for this user" %} <br />
+        <a rel="nofollow" href="{% url "social:begin" "twitter" %}?next={{request.path}}">
+            <svg id="twitter_icon" height="40px" width="40px" version="1.1" viewBox="0 0 112.197 112.197" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="56.099" cy="56.098" r="56.098" style="fill:#ccc;"></circle><path d="M90.461,40.316c-2.404,1.066-4.99,1.787-7.702,2.109c2.769-1.659,4.894-4.284,5.897-7.417    c-2.591,1.537-5.462,2.652-8.515,3.253c-2.446-2.605-5.931-4.233-9.79-4.233c-7.404,0-13.409,6.005-13.409,13.409    c0,1.051,0.119,2.074,0.349,3.056c-11.144-0.559-21.025-5.897-27.639-14.012c-1.154,1.98-1.816,4.285-1.816,6.742    c0,4.651,2.369,8.757,5.965,11.161c-2.197-0.069-4.266-0.672-6.073-1.679c-0.001,0.057-0.001,0.114-0.001,0.17    c0,6.497,4.624,11.916,10.757,13.147c-1.124,0.308-2.311,0.471-3.532,0.471c-0.866,0-1.705-0.083-2.523-0.239    c1.706,5.326,6.657,9.203,12.526,9.312c-4.59,3.597-10.371,5.74-16.655,5.74c-1.08,0-2.15-0.063-3.197-0.188    c5.931,3.806,12.981,6.025,20.553,6.025c24.664,0,38.152-20.432,38.152-38.153c0-0.581-0.013-1.16-0.039-1.734    C86.391,45.366,88.664,43.005,90.461,40.316L90.461,40.316z" style="fill:#F1F2F2;"></path></svg>
+        </a>
+    {% endif %}
+    </p>
+    <h3>Facebook</h3>
+    <p>
+    {% if profile.facebook_id %}
+        {% trans "Facebook linked" %}: <a href="http://facebook.com/profile.php?id={{profile.facebook_id}}">{{profile.facebook_id}}</a>
+    {% else %}
+        {% trans "Link Facebook for this user" %} <br />
+        <a rel="nofollow" href="{% url "social:begin" "facebook" %}?next={{request.path}}">
+            <svg id="facebook_icon" height="40px" width="40px" enable-background="new 0 0 48 48" version="1.1" viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="24" cy="24" fill="#ccc" r="24"></circle><path d="M29.9,19.5h-4v-2.6c0-1,0.7-1.2,1.1-1.2c0.5,0,2.8,0,2.8,0v-4.4l-3.9,0c-4.4,0-5.3,3.3-5.3,5.3v2.9h-2.5V24  h2.5c0,5.8,0,12.7,0,12.7h5.3c0,0,0-7,0-12.7h3.6L29.9,19.5z" fill="#FFFFFF"></path></svg>
+        </a>
+    {% endif %}
+    </p>
 </div>
-
 {% endblock %}

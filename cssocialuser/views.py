@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from django.template import RequestContext
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_list_or_404
@@ -19,15 +19,13 @@ from cssocialuser.utils.slug import time_slug_string
 from django.utils.translation import ugettext as _
 
 def index(request):
-    """ """
     h = {}
-    return render_to_response('cssocialuser/base.html', h, context_instance=RequestContext(request))
+    return render(request, 'cssocialuser/base.html', h)
 
 
 
 @login_required
 def edit_profile(request):
-    """ """
     tab = 'personal'
     user= request.user
     profile = user
@@ -41,7 +39,7 @@ def edit_profile(request):
     else:
         profileform = ProfileForm(instance=profile)
 
-    return render_to_response('profile/edit_personal.html', locals(), context_instance=RequestContext(request))
+    return render(request, 'profile/edit_personal.html', locals())
 
 
 def handle_uploaded_file(f,title):
@@ -69,7 +67,7 @@ def edit_profile_photo(request):
 
     else:
         form = ProfilePhotoForm()
-    return render_to_response('profile/edit_photo.html', locals(), context_instance=RequestContext(request))
+    return render(request, 'profile/edit_photo.html', locals())
 
 
 @login_required
@@ -78,7 +76,7 @@ def edit_profile_social(request):
     tab = 'social'
     user = request.user
     profile = user
-    return render_to_response('profile/edit_social.html', locals(), context_instance=RequestContext(request))
+    return render(request, 'profile/edit_social.html', locals())
 
 def update_session_auth_hash(request, user):
     """
@@ -99,7 +97,7 @@ def password_change(request,
                     template_name='profile/edit_pass.html',
                     post_change_redirect=None,
                     password_change_form=PasswordChangeForm,
-                    current_app=None, extra_context=None):
+                    extra_context=None):
     if post_change_redirect is None:
         post_change_redirect = reverse('cssocialuser_edit_profile_pass_done')
     else:
@@ -119,18 +117,16 @@ def password_change(request,
     }
     if extra_context is not None:
         context.update(extra_context)
-    return TemplateResponse(request, template_name, context,
-                            current_app=current_app)
+    return TemplateResponse(request, template_name, context)
 
 @login_required
 def password_change_done(request,
                          template_name='profile/edit_pass_done.html',
-                         current_app=None, extra_context=None):
+                         extra_context=None):
     context = {
         'title': _('Password change successful'),
         'tab': 'pass',
     }
     if extra_context is not None:
         context.update(extra_context)
-    return TemplateResponse(request, template_name, context,
-                            current_app=current_app)
+    return TemplateResponse(request, template_name, context)
