@@ -4,7 +4,8 @@ HISTORY
 0.46 (unreleased)
 -----------------
 
-- Nothing changed yet.
+- python socia auth jarri [Jatsu Argarate <jargarate@codesyntax.com>]
+
 
 
 0.45 (2018-07-05)
