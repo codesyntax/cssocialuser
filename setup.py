@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.47'
+version = '0.48.dev0'
 
 
 setup(name='cssocialuser',
