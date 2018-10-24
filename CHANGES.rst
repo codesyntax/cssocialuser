@@ -1,7 +1,7 @@
 HISTORY
 =======
 
-0.47 (unreleased)
+0.47 (2018-10-24)
 -----------------
 
 - Nothing changed yet.
